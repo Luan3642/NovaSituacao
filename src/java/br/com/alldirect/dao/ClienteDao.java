@@ -31,11 +31,10 @@ public class ClienteDao {
         String sql = "INSERT INTO CLIENTE(NOMECLIENTE,CPFCLIENTE, DATANASCIMENTO,SEXOCLIENTE) VALUES (?,?,?,?,?)";
         try {
             stmt = conecta.prepareStatement(sql);
-            stmt.setInt(1, cliente.getIdCliente());
-            stmt.setString(2, cliente.getNomeCliente());
-            stmt.setInt(3, cliente.getCpfCliente());
-            stmt.setDate(4, cliente.getDataNascimento());
-            stmt.setString(5, cliente.getSexoCliente());
+            stmt.setString(1, cliente.getNomeCliente());
+            stmt.setInt(2, cliente.getCpfCliente());
+            stmt.setDate(3, cliente.getDataNascimento());
+            stmt.setString(4, cliente.getSexoCliente());
             stmt.execute();
             stmt.close();
         } catch (SQLException e) {
