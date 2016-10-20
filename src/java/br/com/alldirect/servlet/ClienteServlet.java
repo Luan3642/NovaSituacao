@@ -9,6 +9,7 @@ import br.com.alldirect.model.ClienteModel;
 import br.com.alldirect.dao.ClienteDao;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -34,11 +35,13 @@ import javax.servlet.http.HttpServletResponse;
             String  nomeCliente = request.getParameter("nomeCliente");
             int  cpfCliente = Integer.parseInt(request.getParameter("cpfCliente"));
             String sexoCliente = request.getParameter("sexoCliente");
+            int idade  =  Integer.parseInt(request.getParameter("idade"));
 
             ClienteModel clienteModel = new ClienteModel();
             clienteModel.setNomeCliente(nomeCliente);
             clienteModel.setCpfCliente (cpfCliente);
             clienteModel.setSexoCliente(sexoCliente);
+            clienteModel.setIdade(idade);
             
             
            

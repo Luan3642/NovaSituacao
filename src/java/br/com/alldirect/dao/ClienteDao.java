@@ -28,12 +28,12 @@ public class ClienteDao {
     }
 
     public void adicionarCliente(ClienteModel cliente) throws SQLException {
-        String sql = "INSERT INTO CLIENTE(NOMECLIENTE,CPFCLIENTE, DATANASCIMENTO,SEXOCLIENTE) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO CLIENTE(NOME_CLI,CPF_CLI, IDADE_CLI,SEXO_CLI) VALUES (?,?,?,?)";
         try {
             stmt = conecta.prepareStatement(sql);
             stmt.setString(1, cliente.getNomeCliente());
             stmt.setInt(2, cliente.getCpfCliente());
-            stmt.setDate(3, cliente.getDataNascimento());
+            stmt.setInt(3, cliente.getIdade());
             stmt.setString(4, cliente.getSexoCliente());
             stmt.execute();
             stmt.close();
@@ -56,7 +56,7 @@ public class ClienteDao {
                 while (rs.next()){
                     ClienteModel clienteModel = new ClienteModel();
                     clienteModel.setCpfCliente(rs.getInt("cpf"));
-                    clienteModel.setDataNascimento(rs.getDate("dataNascimento"));
+                    clienteModel.setIdade(rs.getInt("idade"));
                     clienteModel.setNomeCliente(rs.getString("nomeCliente"));
                     clienteModel.setSexoCliente(rs.getString("sexoCliente"));
                 }

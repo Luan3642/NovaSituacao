@@ -29,6 +29,10 @@
                 <input name="sexoCliente" type="text">
                 </tr>
                 <tr>
+                <label>Digite a idade do cliente</label>
+                <input name="idade" type="text">
+                </tr>
+                <tr>
                 <input type="submit" class="btn btn-primary" value="Gravar cliente"><br>
                 </tr>
                 </td>

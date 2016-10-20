@@ -7,19 +7,17 @@ package br.com.alldirect.model;
 
 import java.sql.Date;
 
-
-
 /**
  *
  * @author Aluno
  */
 public class ClienteModel {
-    
-    private  int idCliente;
-   private String nomeCliente;
-   private int cpfCliente;
-   private Date dataNascimento;
-   private String sexoCliente;
+
+    private int idCliente;
+    private String nomeCliente;
+    private int cpfCliente;
+    private int idade;
+    private String sexoCliente;
 
     public int getIdCliente() {
         return idCliente;
@@ -45,12 +43,12 @@ public class ClienteModel {
         this.cpfCliente = cpfCliente;
     }
 
-    public Date getDataNascimento() {
-        return dataNascimento;
+    public int getIdade() {
+        return idade;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 
     public String getSexoCliente() {
@@ -60,5 +58,7 @@ public class ClienteModel {
     public void setSexoCliente(String sexoCliente) {
         this.sexoCliente = sexoCliente;
     }
+
     
+
 }
