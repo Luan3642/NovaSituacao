@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+
 package br.com.alldirect.model;
 
-import java.sql.Date;
 
-/**
- *
- * @author Aluno
- */
 public class ClienteModel {
 
     private int idCliente;
@@ -18,6 +10,9 @@ public class ClienteModel {
     private int cpfCliente;
     private int idade;
     private String sexoCliente;
+    private String bairro;
+    private String cidade;
+    private String endereco;
 
     public int getIdCliente() {
         return idCliente;
@@ -59,6 +54,31 @@ public class ClienteModel {
         this.sexoCliente = sexoCliente;
     }
 
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    
     
 
 }
