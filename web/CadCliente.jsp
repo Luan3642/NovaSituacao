@@ -13,7 +13,7 @@
     </head>
     <body>
         <c:import url="Cabecalho.jsp"/>
-        <div class=" col-xs-4 arrumarCampo">
+        <div class="col-xs-5 row arrumarCampo">
             <legend>
                 Informações Pessoais 
             </legend>
@@ -149,7 +149,7 @@
                 </select>
             </div> 
         </div>
-        <div class=" col-xs-4 arrumarCampo">
+        <div class="col-xs-5 arrumarCampo">
             <legend>
                 Endereço 
             </legend>
@@ -178,8 +178,9 @@
                 <input class="form-control" placeholder="Digite seu estado" name="estado"></input>
             </div>
         </div>
-        <div class="col-xs-4">
-            <c:import url="Rodape.jsp"/>   
-        </div>
+        <div class="col-xs-2">
+          <input type="submit" class="btn btn-primary" value="Cadastrar o cliente"><br>
+         </div>
+
     </body>
-</html>
+</html> 

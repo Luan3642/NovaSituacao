@@ -9,6 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/estiloProprio.css">
         <title>JSP Page</title>
     </head>
     <body>

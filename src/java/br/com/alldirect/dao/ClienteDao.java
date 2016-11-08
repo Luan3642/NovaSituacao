@@ -55,7 +55,7 @@ public class ClienteDao {
             stmt.execute();
             stmt.close();
         } catch (SQLException e) {
-            System.out.println(" Erro ao adicionar o cliente");
+            System.out.println(" Erro ao adicionar o cliente" +e );
         }
     }
 
