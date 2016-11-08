@@ -27,13 +27,13 @@
             </div>
             <div class="form-group row arrumarCampo">
                 <label class="control-label ">Digite seu RG:</label>
-                <input class="form-control" placeholder="Digite seu RG" name="cpfCliente">  </input>
+                <input class="form-control" placeholder="Digite seu RG" name="rgCliente">  </input>
             </div>
             <div class="form-group row arrumarCampo">
                 <label for="email"> Digite seu email: </label>
                 <div class="input-group">
                     <span class="input-group-addon">@</span>
-                    <input id="email"  class="form-control" type="email">  
+                    <input id="email"  class="form-control" type="email"  name="emailCliente">  
                 </div>
             </div>
             <div class="form-group row arrumarCampo">
@@ -45,7 +45,7 @@
             </div>
             <div class="form-group  row arrumarCampo">
                 <label class="control-label">Digite sua idade: </label>
-                <select class="form-control">
+                <select class="form-control" name="idade">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -155,27 +155,27 @@
             </legend>
             <div class="form-group row arrumarCampo">
                 <label class="control-label"> Digite seu País :</label>
-                <input class="form-control" placeholder="Digite seu País " name=""></input>
+                <input class="form-control" placeholder="Digite seu País " name="clientePais"></input>
             </div>
             <div class="form-group row arrumarCampo">
                 <label class="control-label ">Digite seu CEP:</label>
-                <input class="form-control" placeholder="Digite seu CPF" name=""></input>
+                <input class="form-control" placeholder="Digite seu CEP" name="cep"></input>
             </div>
             <div class="form-group row arrumarCampo">
                 <label class="control-label ">Digite seu complemento:</label>
-                <input class="form-control" placeholder="Digite seu complemento" name=""></input>
+                <input class="form-control" placeholder="Digite seu complemento" name="complemento"></input>
             </div>
             <div class="form-group row arrumarCampo">
                 <label for="email"> Digite seu bairro: </label>
-                <input class="form-control" placeholder="Digite seu bairro" name=""></input>
+                <input class="form-control" placeholder="Digite seu bairro" name="bairro"></input>
             </div>
             <div class="form-group row arrumarCampo">
                 <label for="email"> Digite sua cidade: </label>
-                <input class="form-control" placeholder="Digite sua cidade" name="cpfCliente"></input>
+                <input class="form-control" placeholder="Digite sua cidade" name="cidade"></input>
             </div>
             <div class="form-group row arrumarCampo">
                 <label for="email"> Digite seu estado: </label>
-                <input class="form-control" placeholder="Digite seu estado" name="cpfCliente"></input>
+                <input class="form-control" placeholder="Digite seu estado" name="estado"></input>
             </div>
         </div>
         <div class="col-xs-4">

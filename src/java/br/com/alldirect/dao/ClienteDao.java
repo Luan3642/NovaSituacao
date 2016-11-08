@@ -28,13 +28,30 @@ public class ClienteDao {
     }
 
     public void adicionarCliente(ClienteModel cliente) throws SQLException {
-        String sql = "INSERT INTO CLIENTE(NOME_CLI,CPF_CLI, IDADE_CLI,SEXO_CLI) VALUES (?,?,?,?)";
+        String sql = "INSERT INTO CLIENTE(NOME_CLI,"
+                + "CPF_CLI, "
+                + "IDADE_CLI,"
+                + "SEXO_CLI,"
+                + "RG,EMAIL,"
+                + "CLIENTE_PAIS,CEP"
+                + "COMPLEMENTO,"
+                + "BAIRRO,"
+                + "CIDADE,"
+                + "ESTADO) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
             stmt = conecta.prepareStatement(sql);
             stmt.setString(1, cliente.getNomeCliente());
             stmt.setInt(2, cliente.getCpfCliente());
             stmt.setInt(3, cliente.getIdade());
             stmt.setString(4, cliente.getSexoCliente());
+            stmt.setInt(5, cliente.getRgCliente());
+            stmt.setString(6, cliente.getEmailCliente());
+            stmt.setString(7, cliente.getClientePais());
+            stmt.setInt(8, cliente.getCep());
+            stmt.setString(9, cliente.getComplemento());
+            stmt.setString(10, cliente.getBairro());
+            stmt.setString(11, cliente.getCidade());
+            stmt.setString(12, cliente.getEstado());
             stmt.execute();
             stmt.close();
         } catch (SQLException e) {
@@ -59,6 +76,14 @@ public class ClienteDao {
                     clienteModel.setIdade(rs.getInt("idade"));
                     clienteModel.setNomeCliente(rs.getString("nomeCliente"));
                     clienteModel.setSexoCliente(rs.getString("sexoCliente"));
+                    clienteModel.setRgCliente(rs.getInt("RG"));
+                    clienteModel.setEmailCliente(rs.getString("Email"));
+                    clienteModel.setClientePais(rs.getString("ClientePais"));
+                    clienteModel.setCep(rs.getInt("CEP"));
+                    clienteModel.setComplemento(rs.getString("Complemento"));
+                    clienteModel.setBairro(rs.getString("Bairro"));
+                    clienteModel.setCidade(rs.getString("Cidade"));
+                    clienteModel.setEstado(rs.getString("Estado"));
                 }
                 stmt.close();
                 return listaCliente;

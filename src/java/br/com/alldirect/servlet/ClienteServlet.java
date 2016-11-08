@@ -36,15 +36,31 @@ import javax.servlet.http.HttpServletResponse;
             int  cpfCliente = Integer.parseInt(request.getParameter("cpfCliente"));
             String sexoCliente = request.getParameter("sexoCliente");
             int idade  =  Integer.parseInt(request.getParameter("idade"));
+            int rgCliente = Integer.parseInt(request.getParameter("rgCliente"));
+            String emailCliente = request.getParameter("emailCliente");
+            String clientePais = request.getParameter("clientePais");
+            int cep = Integer.parseInt(request.getParameter("cep"));
+            String  complemento = request.getParameter("complemento");
+            String bairro = request.getParameter("bairro");
+            String cidade = request.getParameter("cidade");
+            String estado = request.getParameter("estado");
+            
 
             ClienteModel clienteModel = new ClienteModel();
             clienteModel.setNomeCliente(nomeCliente);
             clienteModel.setCpfCliente (cpfCliente);
             clienteModel.setSexoCliente(sexoCliente);
             clienteModel.setIdade(idade);
+            clienteModel.setRgCliente(rgCliente);
+            clienteModel.setEmailCliente(emailCliente);
+            clienteModel.setClientePais(clientePais);
+            clienteModel.setCep(cep);
+            clienteModel.setComplemento(complemento);
+            clienteModel.setBairro(bairro);
+            clienteModel.setCidade(cidade);
+            clienteModel.setEstado(estado);
             
-            
-           
+          
 
             try {
                 ClienteDao clienteDao = new ClienteDao();
