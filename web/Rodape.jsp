@@ -13,9 +13,15 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <footer class="rodape">
-            Av. Rui Barbosa, 5.881, Afonso Pena - São José dos Pinhais/PR | CEP 83.005-340 <br/>
+        <footer>
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <p class="navbar-text">
+            Av. Rui Barbosa, 5.881, Afonso Pena - São José dos Pinhais/PR | CEP 83.005-340 
+            <br/>
             (41) 9694-2425
+            </p>
+        </div>        
         </footer>
-    </body>
+    </nav>
+</body>
 </html>

@@ -37,7 +37,7 @@ public class ClienteDao {
                 + "COMPLEMENTO,"
                 + "BAIRRO,"
                 + "CIDADE,"
-                + "ESTADO) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                + "ESTADO) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
         try {
             stmt = conecta.prepareStatement(sql);
             stmt.setString(1, cliente.getNomeCliente());
