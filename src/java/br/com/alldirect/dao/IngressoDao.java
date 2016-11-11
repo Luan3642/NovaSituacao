@@ -35,10 +35,10 @@ public class IngressoDao {
         String sql = "INSERT INTO INGRESSO(JOGO,SETOR,VALOR,QTDE_LOT) VALUES (?,?,?,?)";
         try {
             stmt = conecta.prepareStatement(sql);
-            stmt.setInt(1, ingresso.getIdIngresso());
-            stmt.setInt(2, ingresso.getClienteIngresso());
-            stmt.setInt(3, ingresso.getCadeiraIngresso());
-            stmt.setInt(4, ingresso.getJogoIngresso());
+            stmt.setInt(1, ingresso.getJogoIngresso());
+            stmt.setInt(2, ingresso.getQtdeLot());
+            stmt.setInt(3, ingresso.getSetorIngresso());
+            stmt.setDouble(4, ingresso.getValorIngresso());
             stmt.execute();
             stmt.close();
         } catch (SQLException e) {
@@ -72,9 +72,11 @@ public class IngressoDao {
             rs = stmt.executeQuery();
             while (rs.next()) {
                 IngressoModel IngressoModel = new IngressoModel();
-                IngressoModel.setClienteIngresso(rs.getInt("clienteIngresso"));
-                IngressoModel.setCadeiraIngresso(rs.getInt("CadeiraIngresso"));
+                IngressoModel.setQtdeLot(rs.getInt("qtdeLot"));
+                IngressoModel.setSetorIngresso(rs.getInt("setorIngresso"));
                 IngressoModel.setJogoIngresso(rs.getInt("JogoIngresso"));
+                IngressoModel.setValorIngresso(rs.getDouble("valorIngresso"));
+                
             }
             stmt.close();
             return ListaIngresso;

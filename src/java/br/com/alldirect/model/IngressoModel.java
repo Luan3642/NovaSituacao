@@ -12,8 +12,9 @@ package br.com.alldirect.model;
 public class IngressoModel {
     
     private int idIngresso;
-    private int clienteIngresso;
-    private int cadeiraIngresso;
+    private int setorIngresso;
+    private double valorIngresso;
+    private int qtdeLot;
     private int jogoIngresso;
 
     public int getIdIngresso() {
@@ -24,20 +25,28 @@ public class IngressoModel {
         this.idIngresso = idIngresso;
     }
 
-    public int getClienteIngresso() {
-        return clienteIngresso;
+    public int getSetorIngresso() {
+        return setorIngresso;
     }
 
-    public void setClienteIngresso(int clienteIngresso) {
-        this.clienteIngresso = clienteIngresso;
+    public void setSetorIngresso(int setorIngresso) {
+        this.setorIngresso = setorIngresso;
     }
 
-    public int getCadeiraIngresso() {
-        return cadeiraIngresso;
+    public double getValorIngresso() {
+        return valorIngresso;
     }
 
-    public void setCadeiraIngresso(int cadeiraIngresso) {
-        this.cadeiraIngresso = cadeiraIngresso;
+    public void setValorIngresso(double valorIngresso) {
+        this.valorIngresso = valorIngresso;
+    }
+
+    public int getQtdeLot() {
+        return qtdeLot;
+    }
+
+    public void setQtdeLot(int qtdeLot) {
+        this.qtdeLot = qtdeLot;
     }
 
     public int getJogoIngresso() {
@@ -47,5 +56,6 @@ public class IngressoModel {
     public void setJogoIngresso(int jogoIngresso) {
         this.jogoIngresso = jogoIngresso;
     }
+
     
 }

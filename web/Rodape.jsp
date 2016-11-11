@@ -12,15 +12,14 @@
         <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/estiloProprio.css">
         <title>JSP Page</title>
     </head>
-    <body>
+    <body>  
         <footer>
-        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+        <nav class="navbar navbar-inverse">
             <p class="navbar-text">
             Av. Rui Barbosa, 5.881, Afonso Pena - São José dos Pinhais/PR | CEP 83.005-340 
             <br/>
             (41) 9694-2425
             </p>
-        </div>        
         </footer>
     </nav>
 </body>

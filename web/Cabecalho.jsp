@@ -12,13 +12,12 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
                     <li><a href="#">PÁGINA INICIAL</a></li>
-                    <li><a href="#">CADASTAR O CLIENTE</a></li>
+                    <li><a href="CadCliente.jsp">CADASTAR O CLIENTE</a></li>
                     <li><a href="#">CADASTRAR O INGRESSO</a></li>
-                    <li><a href="#">TESTE DE TESTE</a></li>
                 </ul>  
             </div>        
         </nav>
