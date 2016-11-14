@@ -14,7 +14,7 @@
     </head>
     <body>  
         <footer>
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-inverse navbar-fixed-bottom">
             <p class="navbar-text">
             Av. Rui Barbosa, 5.881, Afonso Pena - São José dos Pinhais/PR | CEP 83.005-340 
             <br/>

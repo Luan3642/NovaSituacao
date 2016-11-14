@@ -20,7 +20,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css">
         <c:import url="Cabecalho.jsp"/>
-        <div class="container">
+        <div class="container" style="padding-top: 75px">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="panel panel-default">
