@@ -10,17 +10,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Compra Ingressos</title>
     </head>
     <body>
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="icon" href="img/pessoa-icon.png" type="image/x-icon"/>
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css" />
+        <link rel="icon" href="img/Icon-ticket.png" type="image/x-icon"/>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css">
         <c:import url="Cabecalho.jsp"/>
-        <div class="container" style="padding-top: 75px">
+        <div class="container" style="padding-top: 80px">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="panel panel-default">
@@ -32,7 +33,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-sm-8">
                     <form>
                         <fieldset>
@@ -84,7 +84,7 @@
                         <br/>
                         <button type="submit" class="btn btn-primary "> 
                             <a href="CompraRealizada.html" class="  btn-default btn-primary">
-                                <span  class="glyphicon glyphicon-thumbs-up"></span>
+                                <span class="glyphicon glyphicon-thumbs-up"></span>
                                 Confirmar Pedido
                             </a>
                         </button>

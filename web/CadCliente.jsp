@@ -201,7 +201,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-5"></div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 " style="margin-top: 20px;">
                         <input type="submit" class="btn btn-primary" value="Cadastrar Cliente" />
                     </div>
                     <div class="col-md-5"></div>
