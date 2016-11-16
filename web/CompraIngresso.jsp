@@ -76,10 +76,6 @@
                                 <label for="validade">Validade do cartão</label>
                                 <input id="validade" type="month" class="form-control" />
                             </div>
-                            <div class="form-group">
-                                <label for="cvv"> CVV</label>
-                                <input  id="cvv" type="text" maxlength="3" class="form-control"/>
-                            </div>
                         </fieldset>
                         <br/>
                         <button type="submit" class="btn btn-primary "> 

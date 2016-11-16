@@ -16,14 +16,14 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css" />
-        <link rel="icon" href="img/Icon-ticket.png" type="image/x-icon"/>
+        <link rel="icon" href="" type="image/x-icon"/>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css">
         <title> Página inicial </title>
         <c:import url="Cabecalho.jsp"/>
     </head>
     <body>
-       
+
         <div style="padding-top: 60px">
         </div>
         <div class="container fullscreen img-responsive">
@@ -59,5 +59,19 @@
                 </a>
             </div>
         </div>
-</body>
+        <div class="row" style="padding-top: 20px;">
+            <div class="col-sm-1 col-md-3">
+                <div class="thumbnail">
+                    <img src="img/pessoa-icon.png" width="100px;" height="100px;">
+                    <div class="caption">
+                        <h3>Cadastrar cliente</h3>
+                        <p>Você pode se cadastrar para manter seu cadastro de usúario, com isso você irá estar registrado em nossos registros, e futuramente receber algumas promoções</p>
+                        <p><a href="CadCliente.jsp" class="btn btn-primary" role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <c:import url="Rodape.jsp"/>
+    </body>
 </html>
