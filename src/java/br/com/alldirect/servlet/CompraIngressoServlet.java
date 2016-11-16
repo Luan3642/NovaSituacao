@@ -21,7 +21,10 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet("/CompraServlet")
+
 public class CompraIngressoServlet extends HttpServlet {
+   
+    
     
  private static final long serialVersionUID = 1L;
 
@@ -45,7 +48,6 @@ public class CompraIngressoServlet extends HttpServlet {
                 ingressoDao.adicionarIngresso(ingressoModel);
             } catch (SQLException ex) {
                 Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
-        }
+            }   
+        }     
 }
