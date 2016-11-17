@@ -30,7 +30,8 @@ public class CompraIngressoServlet extends HttpServlet {
 
         @Override
         public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            
+        
+        int idCliente = Integer.parseInt(request.getParameter("idCliente"));
         String setorIngresso = request.getParameter("setorIngresso");
         Double valorIngresso = Double.parseDouble(request.getParameter("valorIngresso"));
         int qtdeLot = Integer.parseInt(request.getParameter("qtdeLot"));

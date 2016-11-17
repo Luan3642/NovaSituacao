@@ -23,55 +23,69 @@
         <c:import url="Cabecalho.jsp"/>
     </head>
     <body>
-
-        <div style="padding-top: 60px">
-        </div>
-        <div class="container fullscreen img-responsive">
-            <br>
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="img/Estádio-Indianapolis-6.jpg"   class="telacheia">
+        <div style="padding-top: 30px; padding-bottom: 0px; bottom: 0px; margin-bottom: 0px">
+            <div class="fullscreen img-responsive">
+                <br>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="img/Estádio-Indianapolis-6.jpg"   class="telacheia">
+                        </div>
+                        <div class="item">
+                            <img src="img/maxresdefault.jpg"   class="telacheia">
+                        </div>
+                        <div class="item">
+                            <img src="img/e6d76080-0ceb-11e4-909d-27b8a42daa91_manegarrincha_ae.jpg"  class="telacheia">
+                        </div>
+                        <div class="item">
+                            <img src="img/imagem-30.jpg" class="telacheia">
+                        </div>
                     </div>
-                    <div class="item">
-                        <img src="img/maxresdefault.jpg"   class="telacheia">
-                    </div>
-                    <div class="item">
-                        <img src="img/e6d76080-0ceb-11e4-909d-27b8a42daa91_manegarrincha_ae.jpg"  class="telacheia">
-                    </div>
-                    <div class="item">
-                        <img src="img/imagem-30.jpg" class="telacheia">
-                    </div>
-                </div>
-                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-        <div class="row" style="padding-top: 20px;">
-            <div class="col-sm-1 col-md-3">
-                <div class="thumbnail">
-                    <img src="img/pessoa-icon.png" width="100px;" height="100px;">
-                    <div class="caption">
-                        <h3>Cadastrar cliente</h3>
-                        <p>Você pode se cadastrar para manter seu cadastro de usúario, com isso você irá estar registrado em nossos registros, e futuramente receber algumas promoções</p>
-                        <p><a href="CadCliente.jsp" class="btn btn-primary" role="button">Button</a></p>
-                    </div>
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
             </div>
+            <div class="conteudo">
+                <div class="container">
+                    <div class="row" style=" padding-left: 8.5%" >
+                        <div class="col-sm-1 col-md-3">
+                            <div class="thumbnail">
+                                <img src="img/pessoa-icon.png" width="100px;" height="100px;">
+                                <div class="caption">
+                                    <h3>Cadastrar cliente</h3>
+                                    <p>Cadastre-se para adiquirir algumas promoções futuras no nosso novo sistema de compra</p>  
+                                    <p><a href="CadCliente.jsp" class="btn btn-primary" role="button">Cadastro</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1 col-md-3">
+                                <div class="thumbnail">
+                                    <img src="img/Icon-ticket.png" width="100px;" height="100px;">
+                                    <div class="caption">
+                                        <h3>Compre seu ingresso:</h3>
+                                        <p>Aqui você efetua a compra de seu ingresso, para os melhores jogos do evento </p>
+                                        <p><a href="CompraIngresso.jsp" class="btn btn-primary" role="button">Comprar</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
         <c:import url="Rodape.jsp"/>
     </body>
 </html>
