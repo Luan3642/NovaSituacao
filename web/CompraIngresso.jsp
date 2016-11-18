@@ -32,19 +32,19 @@
                         <fieldset>
                             <legend>Informações de compra </legend>
                             <div class="form-group">
-                                <label > Escolha o jogo: </label>
+                                <label>Escolha o jogo:</label>
                                 <select class="form-control" name="jogoIngresso">
-                                    <option>Primeiro jogo</option>
-                                    <option>Segundo jogo</option>
+                                    <option value="1">Primeiro jogo</option>
+                                    <option value="2">Segundo jogo</option>                                   
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label> Escolha o setor: </label>
+                                <label>Escolha o setor:</label>
                                 <select class="form-control" name="setorIngresso">
-                                    <option>Amarelo</option>
-                                    <option>Azul</option>
-                                    <option>Verde</option>
-                                    <option>Branco</option>
+                                    <option value="1">Amarelo</option>
+                                    <option value="2">Azul</option>
+                                    <option value="3">Verde</option>
+                                    <option value="4">Branco</option>
                                 </select>
                             </div>
                         </fieldset>

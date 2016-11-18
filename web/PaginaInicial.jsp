@@ -82,7 +82,7 @@
                                         <div class="caption">
                                             <h3>Consultar tabela de preços</h3>
                                             <p>Aqui você pode consultar o preço dos ingressos, de acordo com o dia e o setor</p>
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                                            <p><a href="#" class="btn btn-primary" role="button">Consultar</a></p>
                                         </div>
                                     </div>
                                 </div>
