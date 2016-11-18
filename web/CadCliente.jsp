@@ -1,35 +1,39 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Tag para colocar icon na página-->
+        <link rel="icon" href="img/pessoa-icon.png" type="image/x-icon"/>
+        <!-- Importações do bootstrap-->
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="icon" href="img/pessoa-icon.png" type="image/x-icon"/>
-        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css" />
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css"/>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css">
         <title>Cadastro de Cliente</title>
     </head>
     <body>
-        <c:import url="Cabecalho.jsp" />
+        <!-- Importação para o cabeçalho-->
+        <c:import url="Cabecalho.jsp"/>
         <form action="ClienteServlet" method="GET">
             <div class="container" style="padding-top: 65px">
                 <div class="row">
                     <div class="col-md-1"></div>
+                    <!-- Legendas do topo -->
                     <div class="col-md-5"><legend>Informações Pessoais</legend></div>
                     <div class="col-md-5"><legend>Endereço</legend></div>
                     <div class="col-md-1"></div>
                 </div>
+                <!-- Campos de cadastro-->
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-5">
-                        <label class="control-label"> Digite seu nome:</label>
-                        <input class="form-control" placeholder="Digite seu nome " name="nomeCliente" />
+                        <label class="control-label">Digite seu nome:</label>
+                        <input class="form-control" placeholder="Digite seu nome" name="nomeCliente" />
                     </div>
                     <div class="col-md-5">
-                        <label class="control-label"> Digite seu País :</label>
+                        <label class="control-label">Digite seu País:</label>
                         <input class="form-control" placeholder="Digite seu País " name="clientePais" />                
                     </div>
                     <div class="col-md-1"></div>
@@ -59,14 +63,14 @@
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-5">
-                        <label for="email"> Digite seu email: </label>
+                        <label> Digite seu email: </label>
                         <div class="input-group">
                             <span class="input-group-addon">@</span>
-                            <input id="email"  class="form-control" type="email"  name="emailCliente" />  
+                            <input class="form-control" type="email"  name="emailCliente" />  
                         </div>
                     </div>
                     <div class="col-md-5">
-                        <label for="email"> Digite seu bairro: </label>
+                        <label for="email">Digite seu bairro:</label>
                         <input class="form-control" placeholder="Digite seu bairro" name="bairro" />
                     </div>
                     <div class="col-md-1"></div>
@@ -74,14 +78,14 @@
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-5">
-                        <label class="control-label "> Digite seu sexo:  </label>
+                        <label class="control-label ">Digite seu sexo:</label>
                         <select class="form-control" name="sexoCliente">
                             <option>Masculino</option>
                             <option>Feminino</option>
                         </select>
                     </div>
                     <div class="col-md-5">
-                        <label for="email"> Digite sua cidade: </label>
+                        <label for="email">Digite sua cidade:</label>
                         <input class="form-control" placeholder="Digite sua cidade" name="cidade" />
                     </div>
                     <div class="col-md-1"></div>
@@ -89,7 +93,7 @@
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-5">
-                        <label class="control-label">Digite sua idade: </label>
+                        <label class="control-label">Digite sua idade:</label>
                         <select class="form-control" name="idade">
                             <option>1</option>
                             <option>2</option>
@@ -194,7 +198,7 @@
                         </select>
                     </div>
                     <div class="col-md-5">
-                        <label for="email"> Digite seu estado: </label>
+                        <label for="email">Digite seu estado:</label>
                         <input class="form-control" placeholder="Digite seu estado" name="estado" />
                     </div>
                     <div class="col-md-1"></div>
@@ -208,6 +212,9 @@
                 </div>
             </div>
         </form>
+        <!-- Padding utilizado para arrumar footer-->
+        <div style="padding-top: 60px;">
+        </div>
         <c:import url="Rodape.jsp" />
     </body>
 </html>

@@ -1,12 +1,12 @@
 .arrumarCampo{
     margin-left: -1px;
 }
-.rodape{
+footer{
     background: #333;
-    color: #FFF;
-    position: fixed;
-    bottom: 0;
-}   
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
 .arrumarPadding {
     padding-top: 65px;
 }

@@ -11,7 +11,7 @@ package br.com.alldirect.model;
  */
 public class FileiraModel {
     
-    private int idFileira;
+   private int idFileira;
    private String nomeFileira;
    private int setorFileira;
 

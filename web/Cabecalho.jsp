@@ -4,6 +4,7 @@
             <li><a href="PaginaInicial.jsp">PÁGINA INICIAL</a></li>
             <li><a href="CadCliente.jsp">CADASTAR O CLIENTE</a></li>
             <li><a href="CompraIngresso.jsp">COMPRAR INGRESSO</a></li>
+            <li><a href="" >TABELA DE PREÇOS</a></li>
         </ul>  
     </div>        
 </nav>

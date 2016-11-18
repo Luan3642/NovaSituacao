@@ -1,12 +1,6 @@
-<%-- 
-    Document   : PaginaInicial
-    Created on : 15/11/2016, 13:29:41
-    Author     : luan
---%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -73,11 +67,23 @@
                         <div class="row">
                             <div class="col-sm-1 col-md-3">
                                 <div class="thumbnail">
-                                    <img src="img/Icon-ticket.png" width="100px;" height="100px;">
+                                    <img src="img/Icon-ticket.png" width="73px;" height="73px;">
                                     <div class="caption">
-                                        <h3>Compre seu ingresso:</h3>
+                                        <h3>Compre seu ingresso</h3>
                                         <p>Aqui você efetua a compra de seu ingresso, para os melhores jogos do evento </p>
                                         <p><a href="CompraIngresso.jsp" class="btn btn-primary" role="button">Comprar</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-1 col-md-3">
+                                    <div class="thumbnail">
+                                        <img src="img/Cifrão_symbol.svg (1).png" width="72px;" height="72px;">
+                                        <div class="caption">
+                                            <h3>Consultar tabela de preços</h3>
+                                            <p>Aqui você pode consultar o preço dos ingressos, de acordo com o dia e o setor</p>
+                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
