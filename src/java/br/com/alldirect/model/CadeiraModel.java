@@ -11,7 +11,7 @@ package br.com.alldirect.model;
  */
 public class CadeiraModel {
     
-    private int idCadeira;
+   private int idCadeira;
    private int numeroCadeira;
    private int fileiraCadeira;
 

@@ -30,17 +30,16 @@ public class ControlePreco {
             String jogoIngresso = request.getParameter("jogoIngresso");
             String setorIngresso = request.getParameter("setorIngresso");
 
-            if (jogoIngresso.equals("1")) {
-
+            if (jogoIngresso.equals("1")){
                 int idCliente = Integer.parseInt(request.getParameter("idCliente"));
                 Double valorIngresso = Double.parseDouble(request.getParameter("valorIngresso"));
                 int qtdeLot = Integer.parseInt(request.getParameter("qtdeLot"));
-
+                RequestDispatcher rd = request.getRequestDispatcher("PaginaCompraPrimeiroSetorAmarelo");
+                rd.forward(request, response);
             }
             // sempre fazer ifs nunca else
 
-            if (jogoIngresso.equals("2")) {
-
+            if (jogoIngresso.equals("2")){
                 int idCliente = Integer.parseInt(request.getParameter("idCliente"));
                 Double valorIngresso = Double.parseDouble(request.getParameter("valorIngresso"));
                 int qtdeLot = Integer.parseInt(request.getParameter("qtdeLot"));
