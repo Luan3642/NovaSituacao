@@ -17,7 +17,7 @@
         <!-- Importação para o cabeçalho-->
         <c:import url="Cabecalho.jsp"/>
         <form action="ClienteServlet" method="GET">
-            <div class="container" style="padding-top: 65px">
+            <div class="container espacamentoPaginaCadCliente">
                 <div class="row">
                     <div class="col-md-1"></div>
                     <!-- Legendas do topo -->
@@ -40,10 +40,10 @@
                 </div>
                 <div class="row">
                     <div class="col-md-1"></div>
-                    <div class="col-md-5"><label class="control-label ">Digite seu CPF:</label>
+                    <div class="col-md-5"><label class="control-label">Digite seu CPF:</label>
                         <input class="form-control" placeholder="Digite seu CPF" name="cpfCliente" /></div>
                     <div class="col-md-5">
-                        <label class="control-label ">Digite seu CEP:</label>
+                        <label class="control-label">Digite seu CEP:</label>
                         <input class="form-control" placeholder="Digite seu CEP" name="cep" />
                     </div>
                     <div class="col-md-1"></div>
@@ -51,7 +51,7 @@
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-5">
-                        <label class="control-label ">Digite seu RG:</label>
+                        <label class="control-label">Digite seu RG:</label>
                         <input class="form-control" placeholder="Digite seu RG" name="rgCliente" />
                     </div>
                     <div class="col-md-5">
@@ -63,7 +63,7 @@
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-5">
-                        <label> Digite seu email: </label>
+                        <label> Digite seu email:</label>
                         <div class="input-group">
                             <span class="input-group-addon">@</span>
                             <input class="form-control" type="email"  name="emailCliente" />  
@@ -205,7 +205,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-5"></div>
-                    <div class="col-md-2 " style="margin-top: 20px;">
+                    <div class="col-md-2 arrumarBotaoCadCliente">
                         <input type="submit" class="btn btn-primary" value="Cadastrar Cliente" />
                     </div>
                     <div class="col-md-5"></div>
@@ -213,7 +213,7 @@
             </div>
         </form>
         <!-- Padding utilizado para arrumar footer-->
-        <div style="padding-top: 60px;">
+        <div class="arrumarFooterPaginaCadCliente">
         </div>
         <c:import url="Rodape.jsp" />
     </body>

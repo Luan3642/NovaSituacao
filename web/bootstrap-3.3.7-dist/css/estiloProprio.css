@@ -1,6 +1,3 @@
-.arrumarCampo{
-    margin-left: -1px;
-}
 footer{
     background: #333;
     color: #fff;
@@ -16,9 +13,25 @@ footer{
     margin: auto;
     height: 300px;   
 }
-.telacheia{
-    width: 100%;
+.espacamentoPaginaCadCliente{
+    padding-top: 65px;
 }
-.conteudo{
-    padding: 50px;
+.arrumarBotaoCadCliente{
+    margin-top: 20px;
 }
+.arrumarFooterPaginaCadCliente{
+    padding-top: 60px;
+}
+.paddingArrumarPaginaDecompraIngresso{
+    padding-top: 80px;
+}
+.arrumarFooterPaginaCompraIngresso{
+    padding-top: 105px;
+}
+.arrumarEspacoEntreCarousel{
+    padding-top: 20px;
+}
+.carouseltelacheia{
+    padding-top: 30px; padding-bottom: 0px; bottom: 0px; margin-bottom: 0px;
+} 
+

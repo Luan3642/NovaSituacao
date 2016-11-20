@@ -1,4 +1,3 @@
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
@@ -7,21 +6,24 @@
         <title>Compra Ingressos</title>
     </head>
     <body>
+        <!-- Importações Bootstrap-->
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="icon" href="img/pessoa-icon.png" type="image/x-icon"/>
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css" />
-        <link rel="icon" href="img/Icon-ticket.png" type="image/x-icon"/>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css">
+        <!-- Importação para Icone ná página-->
+        <link rel="icon" href="img/Icon-ticket.png" type="image/x-icon"/>
+        <!-- Importação cabeçalho-->
         <c:import url="Cabecalho.jsp"/>
-        <div class="container" style="padding-top: 80px">
+        <div class="container paddingArrumarPaginaDecompraIngresso">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h2 class="painel-title">Sua compra </h2>
                         </div>
+                        <!-- Painel com Imagem dos setores-->
                         <div class="panel-body">
                             <img src="img/setor.jpg" width="300px" height="300px" class="img-responsive img-thumbnail">
                         </div>
@@ -29,6 +31,7 @@
                 </div>
                 <div class="col-sm-8">
                     <form>
+                        <!-- Campos de informação sobre o jogo-->
                         <fieldset>
                             <legend>Informações de compra </legend>
                             <div class="form-group">
@@ -48,28 +51,10 @@
                                 </select>
                             </div>
                         </fieldset>
-                        <fieldset>
-                            <legend> Forma de pagamento</legend>
-                            <div class="form-group">
-                                <label for="bandeira">Bandeira:</label>
-                                <select  id="bandeira" class="form-control">
-                                    <option value="visa">Visa</option>
-                                    <option value="visa">Mastercard</option>
-                                    <option value="visa">American Express</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="senha" > Digite o número do cartão </label>
-                                <input id="senha" class="form-control" type="text" />
-                            </div>
-                            <div class="form-group">
-                                <label for="validade">Validade do cartão</label>
-                                <input id="validade" type="month" class="form-control" />
-                            </div>
-                        </fieldset>
                         <br/>
+                        <!--Botão de comprar rederecionando para a página de compra definitiva-->
                         <button type="submit" class="btn btn-primary "> 
-                            <a href="CompraRealizada.html" class="  btn-default btn-primary">
+                            <a href="#" class="btn-default btn-primary">
                                 <span class="glyphicon glyphicon-thumbs-up"></span>
                                 Confirmar Pedido
                             </a>
@@ -79,8 +64,9 @@
             </div>
         </div>
         <br/>
-        <div style="padding-top: 20px;">
+        <div class="arrumarFooterPaginaCompraIngresso">
         </div>
+        <!-- Importação para o Rodapé-->
         <c:import url="Rodape.jsp"/>
     </body>
 </html>
