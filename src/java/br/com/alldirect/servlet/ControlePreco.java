@@ -5,6 +5,7 @@
  */
 package br.com.alldirect.servlet;
 
+import br.com.alldirect.model.IngressoModel;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -17,10 +18,10 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Aluno
  */
-public class ControlePreco {
 
-    //@WebServlet("/CompraServlet")
-    public class CompraIngressoServlet extends HttpServlet {
+
+    @WebServlet("/ControlePreco")
+    public class ControlePreco extends HttpServlet {
 
         private static final long serialVersionUID = 1L;
 
@@ -29,17 +30,20 @@ public class ControlePreco {
 
             String jogoIngresso = request.getParameter("jogoIngresso");
             String setorIngresso = request.getParameter("setorIngresso");
-
-            if (jogoIngresso.equals("1")){
-                int idCliente = Integer.parseInt(request.getParameter("idCliente"));
-                Double valorIngresso = Double.parseDouble(request.getParameter("valorIngresso"));
-                int qtdeLot = Integer.parseInt(request.getParameter("qtdeLot"));
-                RequestDispatcher rd = request.getRequestDispatcher("PaginaCompraPrimeiroSetorAmarelo");
+            
+            System.out.println(jogoIngresso);
+            System.out.println(setorIngresso);
+            
+            if (jogoIngresso.equals("1")&& setorIngresso.equals("1")){
+                RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraPrimeiroJogoSetorAmarelo.jsp");
                 rd.forward(request, response);
+                
             }
             // sempre fazer ifs nunca else
 
-            if (jogoIngresso.equals("2")){
+            if (jogoIngresso.equals("1")&& setorIngresso.equals("2")){
+                
+                
                 int idCliente = Integer.parseInt(request.getParameter("idCliente"));
                 Double valorIngresso = Double.parseDouble(request.getParameter("valorIngresso"));
                 int qtdeLot = Integer.parseInt(request.getParameter("qtdeLot"));
@@ -48,4 +52,3 @@ public class ControlePreco {
             }
         }
     }
-}

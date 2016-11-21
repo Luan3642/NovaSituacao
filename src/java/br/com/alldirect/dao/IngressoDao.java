@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.alldirect.dao;
 
 import br.com.alldirect.connection.ConnectionFactory;
@@ -15,21 +10,19 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Aluno
- */
 public class IngressoDao {
 
+    //Importações Para a conexão 
     private PreparedStatement stmt;
     private ResultSet rs;
     private Connection conecta;
 
-    
-
+    //Método construtor
     public IngressoDao() throws SQLException {
         this.conecta = new ConnectionFactory().getConnection();
     }
+
+    //Método adicionar ingresso
     public void adicionarIngresso(IngressoModel ingresso) throws SQLException {
         String sql = "INSERT INTO INGRESSO(JOGO,SETOR,VALOR,QTDE_LOT) VALUES (?,?,?,?)";
         try {
@@ -41,7 +34,7 @@ public class IngressoDao {
             stmt.execute();
             stmt.close();
         } catch (SQLException e) {
-            System.out.println(" Erro ao adicionar o ingresso");
+            System.out.println(" Erro ao adicionar o ingresso" + e);
         }
         VendaModel vendaModel = new VendaModel();
         String sqll = "INSERT INTO VENDA(QTDE_V,ID_CLIENTE,ID_INGRESSO) VALUES (?,?,?)";
@@ -53,13 +46,11 @@ public class IngressoDao {
             stmt.execute();
             stmt.close();
         } catch (SQLException e) {
-            System.out.println(" Erro ao adicionar o ingresso");
+            System.out.println(" Erro ao adicionar o ingresso" + e);
         }
-    
     }
-
+    
     public void removerIngresso() {
-
     }
 
     public List<IngressoModel> getLista() throws SQLException {
@@ -76,7 +67,6 @@ public class IngressoDao {
                 IngressoModel.setSetorIngresso(rs.getInt("setorIngresso"));
                 IngressoModel.setJogoIngresso(rs.getInt("JogoIngresso"));
                 IngressoModel.setValorIngresso(rs.getDouble("valorIngresso"));
-                
             }
             stmt.close();
             return ListaIngresso;
@@ -85,5 +75,4 @@ public class IngressoDao {
             return null;
         }
     }
-
 }

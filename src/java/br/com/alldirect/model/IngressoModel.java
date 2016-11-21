@@ -1,22 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.alldirect.model;
 
-/**
- *
- * @author Aluno
- */
+
 public class IngressoModel {
     
+    //Atributos da model
     private int idIngresso;
     private int setorIngresso;
     private double valorIngresso;
     private int qtdeLot;
     private int jogoIngresso;
 
+    //Métodos Getters e Setters
     public int getIdIngresso() {
         return idIngresso;
     }

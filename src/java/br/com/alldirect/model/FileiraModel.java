@@ -1,20 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.alldirect.model;
 
-/**
- *
- * @author Aluno
- */
 public class FileiraModel {
-    
-   private int idFileira;
-   private String nomeFileira;
-   private int setorFileira;
 
+    //Atributos da model
+    private int idFileira;
+    private String nomeFileira;
+    private int setorFileira;
+
+    //Métodos Getters e Setters
     public int getIdFileira() {
         return idFileira;
     }
@@ -38,10 +31,5 @@ public class FileiraModel {
     public void setSetorFileira(int setorFileira) {
         this.setorFileira = setorFileira;
     }
-   
-   
+
 }
-
-
-    
-

@@ -5,6 +5,7 @@ package br.com.alldirect.model;
 
 public class ClienteModel {
 
+    //Atributos da model
     private int idCliente;
     private String nomeCliente;
     private int cpfCliente;
@@ -19,6 +20,7 @@ public class ClienteModel {
     private String cidade;
     private String estado;
 
+    //Métodos Getters e Setters
     public int getIdCliente() {
         return idCliente;
     }

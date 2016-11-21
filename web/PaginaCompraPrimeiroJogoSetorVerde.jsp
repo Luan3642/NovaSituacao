@@ -17,7 +17,7 @@
     <body>
         <!-- Importação cabeçalho-->
         <c:import url="Cabecalho.jsp"/>
-        <div class="paddingArrumarPaginaCompraCertezaSetorAmarelo"></div>
+        <div class="paddingArrumarPaginaCompraCerteza"></div>
         <div class="row container">
             <div class="col-md-5"></div>
             <div class="col-md-5">
@@ -32,10 +32,10 @@
                             <dt>Jogo:</dt>
                             <dd>Primeiro dia</dd>
                             <dt>Setor:</dt>
-                            <dd> Amarelo </dd>
+                            <dd>Verde</dd>
                             <dt>Preço:</dt>
-                            <dd>25.00</dd>
-                            <div style="padding-top: 20px;">
+                            <dd>45.00</dd>
+                            <div class="paddingArrumaBotaoPaginaCompraCerteza">
                             </div>
                             <button type="submit" class="btn btn-primary "> 
                                 <a href="#" class="btn-default btn-primary">
@@ -51,6 +51,6 @@
             </div>
         </div>
     </body>
-    <div class="arrumarFooterPaginaCompraCertezaSetorAmarelo"></div>
+    <div class="arrumarFooterPaginaCompra"></div>
     <c:import url="Rodape.jsp"/>
 </html>

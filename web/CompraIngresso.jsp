@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="col-sm-8">
-                    <form>
+                    <form action="ControlePreco" method="GET">
                         <!-- Campos de informação sobre o jogo-->
                         <fieldset>
                             <legend>Informações de compra </legend>
@@ -53,11 +53,9 @@
                         </fieldset>
                         <br/>
                         <!--Botão de comprar rederecionando para a página de compra definitiva-->
-                        <button type="submit" class="btn btn-primary "> 
-                            <a href="#" class="btn-default btn-primary">
+                        <button type="submit" class="btn btn-primary ">
                                 <span class="glyphicon glyphicon-thumbs-up"></span>
                                 Confirmar Pedido
-                            </a>
                         </button>
                     </form>
                 </div>
