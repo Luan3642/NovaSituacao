@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.alldirect.servlet;
 
 import br.com.alldirect.model.IngressoModel;
@@ -14,41 +9,50 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Aluno
- */
+@WebServlet("/ControlePreco")
+public class ControlePreco extends HttpServlet {
 
+    private static final long serialVersionUID = 1L;
 
-    @WebServlet("/ControlePreco")
-    public class ControlePreco extends HttpServlet {
+    @Override
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        private static final long serialVersionUID = 1L;
+        String jogoIngresso = request.getParameter("jogoIngresso");
+        String setorIngresso = request.getParameter("setorIngresso");
 
-        @Override
-        public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        if (jogoIngresso.equals("1") && setorIngresso.equals("1")) {
+            RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraPrimeiroJogoSetorAmarelo.jsp");
+            rd.forward(request, response);
 
-            String jogoIngresso = request.getParameter("jogoIngresso");
-            String setorIngresso = request.getParameter("setorIngresso");
-            
-            System.out.println(jogoIngresso);
-            System.out.println(setorIngresso);
-            
-            if (jogoIngresso.equals("1")&& setorIngresso.equals("1")){
-                RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraPrimeiroJogoSetorAmarelo.jsp");
-                rd.forward(request, response);
-                
-            }
-            // sempre fazer ifs nunca else
+        }
+        if (jogoIngresso.equals("1") && setorIngresso.equals("2")) {
+            RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraPrimeiroJogoSetorAzul.jsp");
+            rd.forward(request, response);
 
-            if (jogoIngresso.equals("1")&& setorIngresso.equals("2")){
-                
-                
-                int idCliente = Integer.parseInt(request.getParameter("idCliente"));
-                Double valorIngresso = Double.parseDouble(request.getParameter("valorIngresso"));
-                int qtdeLot = Integer.parseInt(request.getParameter("qtdeLot"));
-                RequestDispatcher rd = request.getRequestDispatcher("PRECISA FAZER A PAGINA AINDA");
-                rd.forward(request, response);
-            }
+        }
+        if (jogoIngresso.equals("1") && setorIngresso.equals("3")) {
+            RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraPrimeiroJogoSetorVerde.jsp");
+            rd.forward(request, response);
+        }
+        if (jogoIngresso.equals("1") && setorIngresso.equals("4")) {
+            RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraPrimeiroJogoSetorBranco.jsp");
+            rd.forward(request, response);
+        }
+        if (jogoIngresso.equals("2") && setorIngresso.equals("1")) {
+            RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraSegundoJogoSetorAmarelo.jsp");
+            rd.forward(request, response);
+        }
+        if (jogoIngresso.equals("2") && setorIngresso.equals("2")) {
+            RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraSegundoJogoSetorAzul.jsp");
+            rd.forward(request, response);
+        }
+        if (jogoIngresso.equals("2") && setorIngresso.equals("3")) {
+            RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraSegundoJogoSetorVerde.jsp");
+            rd.forward(request, response);
+        }
+        if (jogoIngresso.equals("2") && setorIngresso.equals("4")) {
+            RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraSegundoJogoSetorBranco.jsp");
+            rd.forward(request, response);
         }
     }
+}
