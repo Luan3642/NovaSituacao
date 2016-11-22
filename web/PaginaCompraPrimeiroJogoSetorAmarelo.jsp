@@ -30,23 +30,27 @@
                         <div class="panel-body">
                             <img src="img/Icon-ticket.png" class="img-responsive img-thumbnail">
                             <dl>
-                                <div class="form-group">
-                                    <label class="control-label">Digite seu id de usuário:</label>
-                                    <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"  value=""/>
-                                </div>
+                                <dt>
+                                    <div class="form-group">
+                                        <label class="control-label">Digite seu id de usuário:</label>
+                                        <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"  value=""/>
+                                    </div>
+                                </dt>
                                 <dt>Quantidade :</dt>
                                 <select name="qntdeVenda">
                                     <option value="1">1</option>
                                 </select>
-                                <dt>Id do ingresso :</dt>
+                                <dt>Id do ingresso:</dt>
                                 <select name="idIngresso">
                                     <option value="1">1</option>
                                 </select>
+                                <dt>
                                 <button type="submit" class="btn btn-primary " action="CompraIngressoServlet"> 
                                     <span class="glyphicon glyphicon-thumbs-up"></span>
                                     Compra definitiva
                                     </a>
                                 </button>
+                                </dt>
                             </dl>
                         </div>
                 </div>
