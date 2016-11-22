@@ -54,8 +54,8 @@
                         <br/>
                         <!--Botão de comprar rederecionando para a página de compra definitiva-->
                         <button type="submit" class="btn btn-primary ">
-                                <span class="glyphicon glyphicon-thumbs-up"></span>
-                                Confirmar Pedido
+                            <span class="glyphicon glyphicon-thumbs-up"></span>
+                            Confirmar Pedido
                         </button>
                     </form>
                 </div>

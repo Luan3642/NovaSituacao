@@ -24,19 +24,20 @@ public class IngressoDao {
 
     //Método adicionar ingresso
     public void adicionarIngresso(IngressoModel ingresso) throws SQLException {
-        String sql = "INSERT INTO INGRESSO(JOGO,SETOR,VALOR,QTDE_LOT) VALUES (?,?,?,?)";
+        String sql = "INSERT INTO INGRESSO(JOGO,SETOR,VALOR) VALUES (?,?,?)";
         try {
             stmt = conecta.prepareStatement(sql);
             stmt.setInt(1, ingresso.getJogoIngresso());
-            stmt.setInt(2, ingresso.getQtdeLot());
-            stmt.setInt(3, ingresso.getSetorIngresso());
-            stmt.setDouble(4, ingresso.getValorIngresso());
+            stmt.setInt(2, ingresso.getSetorIngresso());
+            stmt.setDouble(3, ingresso.getValorIngresso());
             stmt.execute();
             stmt.close();
         } catch (SQLException e) {
             System.out.println(" Erro ao adicionar o ingresso" + e);
         }
-        VendaModel vendaModel = new VendaModel();
+    }
+
+    public void adicionarVenda(VendaModel vendaModel) throws SQLException {
         String sqll = "INSERT INTO VENDA(QTDE_V,ID_CLIENTE,ID_INGRESSO) VALUES (?,?,?)";
         try {
             stmt = conecta.prepareStatement(sqll);
@@ -49,7 +50,25 @@ public class IngressoDao {
             System.out.println(" Erro ao adicionar o ingresso" + e);
         }
     }
-    
+
+    public int recuperaIdIngresso() {
+        int idIngresso = 0;
+        String sql = ("SELECT * from ingresso ORDER BY ID_ING DESC LIMIT 1");
+        try {
+            stmt = conecta.prepareStatement(sql);
+            rs = stmt.executeQuery();
+             while(rs.next()){
+                idIngresso = (rs.getInt("id_ING"));
+            }
+            
+            stmt.close();
+            return idIngresso;
+        } catch (SQLException e) {
+            System.out.println(" Erro ao obter o id do ingresso \n" + e);
+        }
+        return 0;
+    }
+
     public void removerIngresso() {
     }
 

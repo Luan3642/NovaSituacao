@@ -23,34 +23,39 @@
             <div class="col-md-5">
                 <!-- Painel de compra-->
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h2 class="painel-title">Descrição</h2>
-                    </div>
-                    <div class="panel-body">
-                        <img src="img/Icon-ticket.png" class="img-responsive img-thumbnail">
-                        <dl>
-                            <dt>Jogo:</dt>
-                            <dd>Primeiro dia</dd>
-                            <dt>Setor:</dt>
-                            <dd>Amarelo</dd>
-                            <dt>Preço:</dt>
-                            <dd>25.00</dd>
-                            <div class="paddingArrumaBotaoPaginaCompraCerteza">
-                            </div>
-                            <button type="submit" class="btn btn-primary "> 
-                                <a href="CompraIngressoServlet" class="btn-default btn-primary">
+                    <form action="CompraIngressoServlet" method="GET">
+                        <div class="panel-heading">
+                            <h2 class="painel-title">Descrição</h2>
+                        </div>
+                        <div class="panel-body">
+                            <img src="img/Icon-ticket.png" class="img-responsive img-thumbnail">
+                            <dl>
+                                <div class="form-group">
+                                    <label class="control-label">Digite seu id de usuário:</label>
+                                    <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"  value=""/>
+                                </div>
+                                <dt>Quantidade :</dt>
+                                <select name="qntdeVenda">
+                                    <option value="1">1</option>
+                                </select>
+                                <dt>Id do ingresso :</dt>
+                                <select name="idIngresso">
+                                    <option value="1">1</option>
+                                </select>
+                                <button type="submit" class="btn btn-primary " action="CompraIngressoServlet"> 
                                     <span class="glyphicon glyphicon-thumbs-up"></span>
                                     Compra definitiva
-                                </a>
-                            </button>
-                        </dl>
-                    </div>
+                                    </a>
+                                </button>
+                            </dl>
+                        </div>
                 </div>
             </div>
             <div class="col-md-5">
             </div>
         </div>
-    </body>
-    <div class="arrumarFooterPaginaCompraCerteza"></div>
-    <c:import url="Rodape.jsp"/>
+    </form>
+</body>
+<div class="arrumarFooterPaginaCompraCerteza"></div>
+<c:import url="Rodape.jsp"/>
 </html>

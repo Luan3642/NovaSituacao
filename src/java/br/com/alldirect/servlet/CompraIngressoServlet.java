@@ -8,6 +8,7 @@ package br.com.alldirect.servlet;
 import br.com.alldirect.dao.ClienteDao;
 import br.com.alldirect.dao.IngressoDao;
 import br.com.alldirect.model.IngressoModel;
+import br.com.alldirect.model.VendaModel;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -25,21 +26,22 @@ public class CompraIngressoServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        IngressoDao ingressoDao = new IngressoDao();
+        
+        int idIngresso = ingressoDao.recuperaIdIngresso();
+        int qntdeVenda = Integer.parseInt(request.getParameter("qntdeVenda"));
         int idCliente = Integer.parseInt(request.getParameter("idCliente"));
-        String setorIngresso = request.getParameter("setorIngresso");
-        Double valorIngresso = Double.parseDouble(request.getParameter("valorIngresso"));
-        int qtdeLot = Integer.parseInt(request.getParameter("qtdeLot"));
-        int jogoIngresso = Integer.parseInt(request.getParameter("jogoIngresso"));
 
-        IngressoModel ingressoModel = new IngressoModel();
-        ingressoModel.setSetorIngresso(jogoIngresso);
-        ingressoModel.setValorIngresso(valorIngresso);
-        ingressoModel.setJogoIngresso(jogoIngresso);
-        ingressoModel.setQtdeLot(qtdeLot);
+        VendaModel VendaModel = new VendaModel();
+        
+        
+        VendaModel.setIdIngresso(idIngresso);
+        VendaModel.setIdCliente(idCliente);
+        VendaModel.setQntdeVenda(qntdeVenda);
 
         try {
-            IngressoDao ingressoDao = new IngressoDao();
-            ingressoDao.adicionarIngresso(ingressoModel);
+            IngressoDao VendaDao = new IngressoDao();
+            VendaDao.adicionarVenda(VendaModel);
         } catch (SQLException ex) {
             Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
