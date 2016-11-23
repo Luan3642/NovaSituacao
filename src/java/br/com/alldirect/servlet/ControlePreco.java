@@ -33,6 +33,8 @@ public class ControlePreco extends HttpServlet {
         int setorIng = Integer.parseInt(request.getParameter("setorIngresso"));
         Double valorIngresso = 25.00;//Double.parseDouble(request.getParameter("valorIngresso"));
         int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
+        
+        
 
         IngressoModel IngressoModel = new IngressoModel();
         IngressoModel.setSetorIngresso(setorIng);

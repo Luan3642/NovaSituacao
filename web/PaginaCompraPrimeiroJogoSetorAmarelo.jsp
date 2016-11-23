@@ -28,38 +28,38 @@
                             <h2 class="painel-title">Descrição</h2>
                         </div>
                         <div class="panel-body">
-                            <img src="img/Icon-ticket.png" class="img-responsive img-thumbnail">
+                            <img src="img/Icon-ticket.png" class="img-responsive img-thumbnail" />
                             <dl>
                                 <dt>
                                     <div class="form-group">
                                         <label class="control-label">Digite seu id de usuário:</label>
-                                        <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"  value=""/>
+                                        <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"  />
                                     </div>
                                 </dt>
                                 <dt>Quantidade :</dt>
                                 <select name="qntdeVenda">
                                     <option value="1">1</option>
                                 </select>
-                                <dt>Id do ingresso:</dt>
-                                <select name="idIngresso">
-                                    <option value="1">1</option>
-                                </select>
+                                <dt>Preço:</dt>
+                                <dd> R$ 25.00</dd>
                                 <dt>
-                                <button type="submit" class="btn btn-primary " action="CompraIngressoServlet"> 
-                                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                                    Compra definitiva
-                                    </a>
-                                </button>
+                                    <button type="submit" class="btn btn-primary " action="CompraIngressoServlet">
+                                        <a class="btn-default btn-primary">
+                                        <span class="glyphicon glyphicon-thumbs-up" />
+                                        Compra definitiva
+                                        </a>
+                                    </button>
                                 </dt>
                             </dl>
                         </div>
+                    </form>
                 </div>
             </div>
             <div class="col-md-5">
             </div>
         </div>
-    </form>
-</body>
-<div class="arrumarFooterPaginaCompraCerteza"></div>
-<c:import url="Rodape.jsp"/>
+
+    </body>
+    <div class="arrumarFooterPaginaCompraCerteza"></div>
+    <c:import url="Rodape.jsp"/>
 </html>

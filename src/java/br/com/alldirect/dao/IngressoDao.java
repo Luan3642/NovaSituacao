@@ -18,7 +18,7 @@ public class IngressoDao {
     private Connection conecta;
 
     //Método construtor
-    public IngressoDao() throws SQLException {
+    public IngressoDao() {
         this.conecta = new ConnectionFactory().getConnection();
     }
 
@@ -36,9 +36,25 @@ public class IngressoDao {
             System.out.println(" Erro ao adicionar o ingresso" + e);
         }
     }
+    public int recuperaIdIngresso() {
+        int idIngresso = 0;
+        String sql = ("SELECT * from ingresso ORDER BY ID_ING DESC LIMIT 1");
+        try {
+            stmt = conecta.prepareStatement(sql);
+            rs = stmt.executeQuery();
+            while(rs.next()){
+                idIngresso = (rs.getInt("id_ING"));
+            }
+            stmt.close();
+            //return idIngresso;
+        } catch (SQLException e) {
+            System.out.println(" Erro ao obter o id do ingresso \n" + e);
+        }
+        return idIngresso;
+    }
 
-    public void adicionarVenda(VendaModel vendaModel) throws SQLException {
-        String sqll = "INSERT INTO VENDA(QTDE_V,ID_CLIENTE,ID_INGRESSO) VALUES (?,?,?)";
+    public void adicionarVenda(VendaModel vendaModel) {
+        String sqll = "INSERT INTO VENDA(ID_INGRESSO,ID_CLIENTE,QTDE_V) VALUES (?,?,?)";
         try {
             stmt = conecta.prepareStatement(sqll);
             stmt.setInt(1, vendaModel.getIdIngresso());
@@ -47,28 +63,10 @@ public class IngressoDao {
             stmt.execute();
             stmt.close();
         } catch (SQLException e) {
-            System.out.println(" Erro ao adicionar o ingresso" + e);
+            System.out.println(" Erro ao confirmar a venda " + e);
         }
     }
-
-    public int recuperaIdIngresso() {
-        int idIngresso = 0;
-        String sql = ("SELECT * from ingresso ORDER BY ID_ING DESC LIMIT 1");
-        try {
-            stmt = conecta.prepareStatement(sql);
-            rs = stmt.executeQuery();
-             while(rs.next()){
-                idIngresso = (rs.getInt("id_ING"));
-            }
-            
-            stmt.close();
-            return idIngresso;
-        } catch (SQLException e) {
-            System.out.println(" Erro ao obter o id do ingresso \n" + e);
-        }
-        return 0;
-    }
-
+    
     public void removerIngresso() {
     }
 

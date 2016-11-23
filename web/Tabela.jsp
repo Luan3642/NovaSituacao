@@ -1,63 +1,72 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"  %>
-<!DOCTYPE html>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css">
-        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css">
         <title> Tabela De Preços</title>
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css">
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
-    <body class="cabecalho" >
-       
-        <h1 style="text-align: center" class="cortexto">TABELA DE PREÇOS</h1>
-        <table class="conteudo" border="0" width="95%" align="center" class="cabecalho" class="rodape" cellspacing="10" cellpadding="4">
-            <tr>
-                <td class="alinhaCentro">Dia Do Jogo</td>
-                <td class="alinhaCentro">Setor Do Jogo</td>
-                <td class="alinhaCentro">Preço Do Jogo</td>
-            </tr>
-            <tr>
-                <td>1°Jogo</td>
-                <td>Azul</td>
-                <td>R$25.00</td>
-            </tr>
-            <tr>
-                <td>1°Jogo</td>
-                <td>Amarelo</td>
-                <td>R$25.00</td>
-            </tr>
-            <tr>
-                <td>1°Jogo</td>
-                <td>Verde</td>
-                <td>R$45.00</td>
-            </tr>
-            <tr>
-                <td>1°Jogo </td>
-                <td>Branco </td>
-                <td>R$45.00</td>
-            </tr>
-            <tr>
-                <td>2°Jogo </td>
-                <td>Branco </td>
-                <td>R$50.00</td>
-            </tr>
-             <tr>
-                <td>2°Jogo </td>
-                <td>Verde </td>
-                <td>R$50.00</td>
-            </tr>
-             <tr>
-                <td>2°Jogo </td>
-                <td>Amarelo </td>
-                <td>R$30.00</td>
-            </tr>
-             <tr>
-                <td>2°Jogo </td>
-                <td>Azul </td>
-                <td>R$30.00</td>
-            </tr>
+    <body>
+        <c:import url="Cabecalho.jsp"/>
+        <div style="padding-top: 70px;">
+        </div>
+        <table class="table">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>Dia Do Jogo</th>
+                    <th>Setor Do Jogo</th>
+                    <th>Preço Do Jogo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Primeiro dia </th>
+                    <td>Amarelo</td>
+                    <td>25.00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Primeiro dia </th>
+                    <td>Azul</td>
+                    <td>25.00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Primeiro dia </th>
+                    <td>Verde</td>
+                    <td>45.00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Primeiro dia </th>
+                    <td>Branco</td>
+                    <td>45.00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Segundo dia</th>
+                    <td>Amarelo</td>
+                    <td>30.00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Segundo dia</th>
+                    <td>Azul</td>
+                    <td>30.00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Segundo dia</th>
+                    <td>Verde</td>
+                    <td>50.00</td>
+                </tr>
+                <tr>
+                    <th scope="row">Segundo dia</th>
+                    <td>Branco</td>
+                    <td>50.00</td>
+                </tr>
+                <tr>
+                </tr>
+            </tbody>
         </table>
+        <c:import url="Rodape.jsp"/>
     </body>
 </html>

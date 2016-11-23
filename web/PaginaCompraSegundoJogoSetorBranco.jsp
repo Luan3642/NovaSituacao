@@ -23,34 +23,40 @@
             <div class="col-md-5">
                 <!-- Painel de compra-->
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h2 class="painel-title">Descrição</h2>
-                    </div>
-                    <div class="panel-body">
-                        <img src="img/Icon-ticket.png" class="img-responsive img-thumbnail">
-                        <dl>
-                            <dt>Jogo:</dt>
-                            <dd>Segundo dia</dd>
-                            <dt>Setor:</dt>
-                            <dd>Branco</dd>
-                            <dt>Preço:</dt>
-                            <dd>50.00</dd>
-                            <div class="paddingArrumaBotaoPaginaCompraCerteza">
-                            </div>
-                            <button type="submit" class="btn btn-primary "> 
-                                <a href="#" class="btn-default btn-primary">
-                                    <span class="glyphicon glyphicon-thumbs-up"></span>
-                                    Compra definitiva
-                                </a>
-                            </button>
-                        </dl>
-                    </div>
+                    <form action="CompraIngressoServlet" method="GET">
+                        <div class="panel-heading">
+                            <h2 class="painel-title">Descrição</h2>
+                        </div>
+                        <div class="panel-body">
+                            <img src="img/Icon-ticket.png" class="img-responsive img-thumbnail">
+                            <dl>
+                                <label class="control-label">Digite seu id de usuário:</label>
+                                <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"  value=""/>
+                            </dl>
+                        </div>
+                        </dt>
+                        <dt>Quantidade :</dt>
+                        <select name="qntdeVenda">
+                            <option value="1">1</option>
+                        </select>
+                        <dt>Preço:</dt>
+                        <dd>R$ 50.00</dd>
+                        <div class="paddingArrumaBotaoPaginaCompraCerteza">
+                        </div>
+                        <button type="submit" class="btn btn-primary "> 
+                            <a href="PaginaInicial.jsp" class="btn-default btn-primary">
+                                <span class="glyphicon glyphicon-thumbs-up"></span>
+                                Compra definitiva
+                            </a>
+                        </button>
+                    </form>
                 </div>
             </div>
-            <div class="col-md-5">
-            </div>
         </div>
-    </body>
-    <div class="arrumarFooterPaginaCompra"></div>
-    <c:import url="Rodape.jsp"/>
+        <div class="col-md-5">
+        </div>
+    </div>
+</body>
+<div class="arrumarFooterPaginaCompra"></div>
+<c:import url="Rodape.jsp"/>
 </html>
