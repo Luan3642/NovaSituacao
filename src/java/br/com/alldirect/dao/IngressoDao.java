@@ -36,13 +36,14 @@ public class IngressoDao {
             System.out.println(" Erro ao adicionar o ingresso" + e);
         }
     }
+
     public int recuperaIdIngresso() {
         int idIngresso = 0;
         String sql = ("SELECT * from ingresso ORDER BY ID_ING DESC LIMIT 1");
         try {
             stmt = conecta.prepareStatement(sql);
             rs = stmt.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 idIngresso = (rs.getInt("id_ING"));
             }
             stmt.close();
@@ -66,9 +67,21 @@ public class IngressoDao {
             System.out.println(" Erro ao confirmar a venda " + e);
         }
     }
-    
-    public void removerIngresso() {
+
+   
+        public void removerIngresso(VendaModel venda) {
+        String sql = "DELETE FROM VENDA WHERE ID = ?";
+        
+        try{
+            PreparedStatement stmt = conecta.prepareStatement(sql);
+            stmt.setInt(1,venda.getIdVenda());
+            stmt.execute();
+            stmt.close();
+        }catch (SQLException e){
+            System.out.println("Erro ao excluir \n" + e);            
+        }
     }
+    
 
     public List<IngressoModel> getLista() throws SQLException {
         List<IngressoModel> ListaIngresso = new ArrayList<>();
@@ -80,10 +93,11 @@ public class IngressoDao {
             rs = stmt.executeQuery();
             while (rs.next()) {
                 IngressoModel IngressoModel = new IngressoModel();
-                IngressoModel.setQtdeLot(rs.getInt("qtdeLot"));
+                IngressoModel.setQtdeLot(rs.getInt("qtde_v"));
                 IngressoModel.setSetorIngresso(rs.getInt("setorIngresso"));
                 IngressoModel.setJogoIngresso(rs.getInt("JogoIngresso"));
                 IngressoModel.setValorIngresso(rs.getDouble("valorIngresso"));
+                
             }
             stmt.close();
             return ListaIngresso;
@@ -91,5 +105,22 @@ public class IngressoDao {
             System.out.println("Erro no SQL" + e);
             return null;
         }
+    }
+
+    public int recuperaIdVenda() {
+        int idVenda = 0;
+        String sql = ("SELECT * from venda ORDER BY ID_VENDA DESC LIMIT 1");
+        try {
+            stmt = conecta.prepareStatement(sql);
+            rs = stmt.executeQuery();
+            while (rs.next()) {
+                idVenda = (rs.getInt("id_VENDA"));
+            }
+            stmt.close();
+            //return idIngresso;
+        } catch (SQLException e) {
+            System.out.println(" Erro ao obter o id do ingresso \n" + e);
+        }
+        return idVenda;
     }
 }

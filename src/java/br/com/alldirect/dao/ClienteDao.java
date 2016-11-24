@@ -71,21 +71,18 @@ public class ClienteDao {
             try{
                 stmt = conecta.prepareStatement(sql);
                 rs = stmt.executeQuery();
-                
                 while (rs.next()){
                     ClienteModel clienteModel = new ClienteModel();
-                    clienteModel.setCpfCliente(rs.getInt("cpf"));
-                    clienteModel.setIdade(rs.getInt("idade"));
-                    clienteModel.setNomeCliente(rs.getString("nomeCliente"));
-                    clienteModel.setSexoCliente(rs.getString("sexoCliente"));
-                    clienteModel.setRgCliente(rs.getInt("RG"));
-                    clienteModel.setEmailCliente(rs.getString("Email"));
-                    clienteModel.setClientePais(rs.getString("ClientePais"));
-                    clienteModel.setCep(rs.getInt("CEP"));
-                    clienteModel.setComplemento(rs.getString("Complemento"));
-                    clienteModel.setBairro(rs.getString("Bairro"));
-                    clienteModel.setCidade(rs.getString("Cidade"));
-                    clienteModel.setEstado(rs.getString("Estado"));
+                    clienteModel.setIdCliente(rs.getInt("ID_CLI"));
+                    clienteModel.setCpfCliente(rs.getInt("CPF_CLI"));
+                    clienteModel.setIdade(rs.getInt("IDADE_CLI"));
+                    clienteModel.setClientePais(rs.getString("CLIENTE_PAIS"));
+                    clienteModel.setNomeCliente(rs.getString("NOME_CLI"));
+                    clienteModel.setSexoCliente(rs.getString("SEXO_CLI"));
+                    clienteModel.setComplemento(rs.getString("COMPLEMENTO"));
+                    clienteModel.setBairro(rs.getString("BAIRRO"));
+                    clienteModel.setEstado(rs.getString("ESTADO"));
+                    listaCliente.add(clienteModel);
                 }
                 stmt.close();
                 return listaCliente;

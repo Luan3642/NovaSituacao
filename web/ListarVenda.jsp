@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Lista Ingresso</title>
+        <title>Lista Venda</title>
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css" />
@@ -18,15 +18,9 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th>Id:</th>
-                    <th>Nome:</th>
-                    <th>CPF:</th>
-                    <th>Complemento:</th>
-                    <th>Bairro:</th>
-                    <th>País:</th>
-                    <th>Sexo:</th>
-                    <th>Idade:</th>
-                </tr>
+                    <th>Quantidade de vendas :</th>
+                    <th>Id ingresso:</th>
+                    <th>Id venda:</th>
             </thead>
             <tbody>
                 <c:forEach var="c" items="${dao.lista}">
