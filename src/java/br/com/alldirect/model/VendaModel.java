@@ -1,4 +1,4 @@
-/*
+/* Não kiba não obg
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -10,7 +10,7 @@ package br.com.alldirect.model;
  * @author Aluno
  */
 public class VendaModel {
-    
+
     private int idVenda;
     private int qntdeVenda;
     private int idCliente;
@@ -47,5 +47,5 @@ public class VendaModel {
     public void setIdIngresso(int idIngresso) {
         this.idIngresso = idIngresso;
     }
-    
+
 }

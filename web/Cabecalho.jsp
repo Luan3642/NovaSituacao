@@ -7,6 +7,7 @@
             <li><a href="Tabela.jsp">TABELA DE PREÇOS</a></li>
             <li><a href="ListaCliente.jsp">LISTAR CLIENTE</a></li>
             <li><a href="ListarVenda.jsp">LISTAR VENDAS</a></li>
+            <li><a href="SetorMaisVendidoJogoDois.jsp">INFORMAÇÕES SOBRE OS INGRESSOS VENDIDOS</a></li>
         </ul>  
     </div>        
 </nav>

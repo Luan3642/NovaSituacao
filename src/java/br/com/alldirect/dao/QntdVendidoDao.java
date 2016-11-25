@@ -26,69 +26,69 @@ public class QntdVendidoDao {
     }
     //setor mais lotado jogo 2
     public int setorAmareloJogo2() {
-        int qntdVendido = 0;
+        int qntdVendidoSet1 = 0;
         String sql = "SELECT count(setor) FROM sallv.ingresso where jogo = 2 and setor = 1";
         try {
             stmt = conecta.prepareStatement(sql);
             rs = stmt.executeQuery();
             while (rs.next()) {
-                qntdVendido = (rs.getInt("count(setor)"));
+                qntdVendidoSet1 = (rs.getInt("count(setor)"));
             }
             stmt.close();
-            return qntdVendido;
+            return qntdVendidoSet1;
         } catch (SQLException e) {
             System.out.println(" Erro ao obter a quantidade de ingressos vendidos \n" + e);
         }
-        return qntdVendido;
+        return qntdVendidoSet1;
     }
     public int setorAzulJogo2() {
-        int qntdVendido = 0;
+         int qntdVendidoSet2 = 0;
         String sql = "SELECT count(setor) FROM sallv.ingresso where jogo = 2 and setor = 2";
         try {
             stmt = conecta.prepareStatement(sql);
             rs = stmt.executeQuery();
             while (rs.next()) {
-                qntdVendido = (rs.getInt("count(setor)"));
+                qntdVendidoSet2 = (rs.getInt("count(setor)"));
             }
             stmt.close();
-            return qntdVendido;
+            return qntdVendidoSet2;
         } catch (SQLException e) {
             System.out.println(" Erro ao obter a quantidade de ingressos vendidos \n" + e);
         }
-        return qntdVendido;
+        return qntdVendidoSet2;
     }
     public int setorVerdeJogo2() {
-        int qntdVendido = 0;
+        int qntdVendidoSet3 = 0;
         String sql = "SELECT count(setor) FROM sallv.ingresso where jogo = 2 and setor = 3";
         try {
             stmt = conecta.prepareStatement(sql);
             rs = stmt.executeQuery();
             while (rs.next()) {
-                qntdVendido = (rs.getInt("count(setor)"));
+                qntdVendidoSet3 = (rs.getInt("count(setor)"));
             }
             stmt.close();
-            return qntdVendido;
+            return qntdVendidoSet3;
         } catch (SQLException e) {
             System.out.println(" Erro ao obter a quantidade de ingressos vendidos \n" + e);
         }
-        return qntdVendido;
+        return qntdVendidoSet3;
     }
     public int setorBrancoJogo2() {
-        int qntdVendido = 0;
+        int qntdVendidoSet4 = 0;
         String sql = "SELECT count(setor) FROM sallv.ingresso where jogo = 2 and setor = 4";
         try {
             stmt = conecta.prepareStatement(sql);
             rs = stmt.executeQuery();
             while (rs.next()) {
-                qntdVendido = (rs.getInt("count(setor)"));
+                qntdVendidoSet4 = (rs.getInt("count(setor)"));
                 
             }
             stmt.close();
-            return qntdVendido;
+            return qntdVendidoSet4;
         } catch (SQLException e) {
             System.out.println(" Erro ao obter a quantidade de ingressos vendidos \n" + e);
         }
-        return qntdVendido;
+        return qntdVendidoSet4;
     }
     //jogo que vendeu mais
     public int vendasSegundoJogo(){

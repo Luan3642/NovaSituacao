@@ -13,7 +13,8 @@
     </head>
     <body>
         <c:import url="Cabecalho.jsp"/>
-        <div style="padding-top: 70px;">
+        <!-- Div para arrumar o espaço de cima-->
+        <div class="paddingArrumaListarClienteTopo">
         </div>
         <jsp:useBean id="dao" class="br.com.alldirect.dao.ClienteDao"/>
         <table class="table">
@@ -30,6 +31,7 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- ForEach para percorrer o método listar-->
                 <c:forEach var="c" items="${dao.lista}">
                     <tr>
                         <th scope="row">${c.idCliente}</th>
@@ -43,6 +45,7 @@
                     </c:forEach>
             </tbody>
         </table>
+        <!-- Div para arrumar o footer-->
         <div class="paddingArrumaListarCliente"></div>
         <c:import url="Rodape.jsp"/>
     </body>

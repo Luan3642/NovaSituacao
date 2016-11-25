@@ -20,21 +20,23 @@
         <div class="paddingArrumarPaginaCompraCerteza"></div>
         <div class="row container">
             <div class="col-md-5"></div>
-                <div class="col-md-5">
-                    <!-- Painel de compra-->
-                    <div class="panel panel-default">
-                        <form action="CompraIngressoServlet" method="GET">
-                            <div class="panel-heading">
-                                <h2 class="painel-title">Descrição</h2>
-                            </div>
-                            <div class="panel-body">
-                                <img src="img/Icon-ticket.png" class="img-responsive img-thumbnail"/>
-                                <dl>
-                                    <label class="control-label">Digite seu id de usuário:</label>
-                                    <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"/>
-                                </dl>
-                            </div>
-                             <dt>Quantidade :</dt>
+            <div class="col-md-5">
+                <!-- Painel de compra-->
+                <div class="panel panel-default">
+                    <form action="CompraIngressoServlet" method="GET">
+                        <div class="panel-heading">
+                            <h2 class="painel-title">Descrição</h2>
+                        </div>
+                        <div class="panel-body">
+                            <img src="img/Icon-ticket.png" class="img-responsive img-thumbnail" />
+                            <dl>
+                                <dt>
+                                    <div class="form-group">
+                                        <label class="control-label">Digite seu id de usuário:</label>
+                                        <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"/>
+                                    </div>
+                                </dt>
+                                <dt>Quantidade:</dt>
                                 <select name="qntdeVenda">
                                     <option value="1">1</option>
                                 </select>
@@ -46,15 +48,15 @@
                                         Compra definitiva
                                     </button>
                                 </dd>
-                        </form>
-                    </div>
+                            </dl>
+                        </div>
+                    </form>
                 </div>
             </div>
+            <div class="col-md-5">
+            </div>
         </div>
-        <div class="col-md-5">
-        </div>
-    </div>
-</body>
-<div class="arrumarFooterPaginaCompra"></div>
-<c:import url="Rodape.jsp"/>
+    </body>
+    <div class="arrumarFooterPaginaCompraCerteza"></div>
+    <c:import url="Rodape.jsp"/>
 </html>

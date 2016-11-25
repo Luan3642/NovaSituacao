@@ -5,6 +5,7 @@
  */
 package br.com.alldirect.servlet;
 
+import br.com.alldirect.model.ResultadoModel;
 import br.com.alldirect.dao.QntdVendidoDao;
 import java.io.IOException;
 import java.io.PrintWriter;

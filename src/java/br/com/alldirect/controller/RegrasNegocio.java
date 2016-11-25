@@ -1,4 +1,4 @@
-/*
+/* Sem kibe zé buceta
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -11,7 +11,6 @@ import br.com.alldirect.model.ResultadoModel;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +22,7 @@ public class RegrasNegocio {
 
     private PreparedStatement stmt;
     private ResultSet rs;
-    private  Connection conecta;
+    private Connection conecta;
 
     public RegrasNegocio() {
         this.conecta = new ConnectionFactory().getConnection();
@@ -31,14 +30,18 @@ public class RegrasNegocio {
 
     /**
      *
+     *
+     *  
+     * @return 
      */
-    public List <ResultadoModel> resultados(){
-        
-         List<ResultadoModel> result = new ArrayList<>();
+    public List<ResultadoModel> getLista() {
+
+        List<ResultadoModel> result = new ArrayList<>();
         ResultadoModel resultadoModel = new ResultadoModel();
-        int SetorMaisVendido = 0;
+        
+        String resultado = ("");
         int JogoQueVendeuMais = 0;
-        double SomaVendaDosJogos = 0;
+        double SomaVendaDosJogos;
 
         QntdVendidoDao qntVendidoDao = new QntdVendidoDao();
         // setor mais lotado segundo jogo
@@ -48,16 +51,16 @@ public class RegrasNegocio {
         int setorBranco = qntVendidoDao.setorBrancoJogo2();
 
         if (setorAmarelo > setorVerde && setorAmarelo > setorAzul && setorAmarelo > setorBranco) {
-            SetorMaisVendido = setorAmarelo;
+             resultado = (" O setor Amarelo ");
         }
         if (setorVerde > setorAmarelo && setorVerde > setorAzul && setorVerde > setorBranco) {
-            SetorMaisVendido = setorVerde;
+             resultado = ("O setor Verde ");
         }
         if (setorAzul > setorAmarelo && setorAzul > setorVerde && setorAzul > setorBranco) {
-            SetorMaisVendido = setorAzul;
+            resultado = ("O setor Azul ");
         }
         if (setorBranco > setorAmarelo && setorBranco > setorVerde && setorBranco > setorAzul) {
-            SetorMaisVendido = setorBranco;
+             resultado = ("O setor Branco ");
         }
         // jogo que mais vendeu
         int vendaJogoDois = qntVendidoDao.vendasSegundoJogo();
@@ -71,13 +74,13 @@ public class RegrasNegocio {
         }
         // soma dos ingressos
         double somaVendasDoisJogos = qntVendidoDao.somaVendaDosJogos();
-        
+
         SomaVendaDosJogos = somaVendasDoisJogos;
-        
-      resultadoModel.setSetorMaisVendido(SetorMaisVendido);
-      resultadoModel.setJogoQueVendeuMais(JogoQueVendeuMais);
-      resultadoModel.setSomaVendaDosJogos(SomaVendaDosJogos);
-        
+
+        resultadoModel.setSetorMaisVendidoJogoDois(resultado);
+        resultadoModel.setJogoQueVendeuMais(JogoQueVendeuMais);
+        resultadoModel.setSomaVendaDosJogos(SomaVendaDosJogos);
+
         result.add(resultadoModel);
         return result;
     }

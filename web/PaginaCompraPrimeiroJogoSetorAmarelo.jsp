@@ -36,7 +36,7 @@
                                         <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"/>
                                     </div>
                                 </dt>
-                                <dt>Quantidade :</dt>
+                                <dt>Quantidade:</dt>
                                 <select name="qntdeVenda">
                                     <option value="1">1</option>
                                 </select>

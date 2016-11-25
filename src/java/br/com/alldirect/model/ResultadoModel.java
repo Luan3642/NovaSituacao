@@ -1,33 +1,31 @@
 package br.com.alldirect.model;
 
 public class ResultadoModel {
+    private String setorMaisVendidoJogoDois;
+    private double somaVendaDosJogos;
+    private int jogoQueVendeuMais;
 
-    private int SetorMaisVendidoJogoDois;
-    private double SomaVendaDosJogos;
-    private int JogoQueVendeuMais;
-
-    public int getSetorMaisVendido() {
-        return SetorMaisVendidoJogoDois;
+    public String getSetorMaisVendidoJogoDois() {
+        return setorMaisVendidoJogoDois;
     }
 
-    public void setSetorMaisVendido(int SetorMaisVendido) {
-        this.SetorMaisVendidoJogoDois = SetorMaisVendido;
+    public void setSetorMaisVendidoJogoDois(String setorMaisVendidoJogoDois) {
+        this.setorMaisVendidoJogoDois = setorMaisVendidoJogoDois;
     }
 
     public double getSomaVendaDosJogos() {
-        return SomaVendaDosJogos;
+        return somaVendaDosJogos;
     }
 
-    public void setSomaVendaDosJogos(double SomaVendaDosJogos) {
-        this.SomaVendaDosJogos = SomaVendaDosJogos;
+    public void setSomaVendaDosJogos(double somaVendaDosJogos) {
+        this.somaVendaDosJogos = somaVendaDosJogos;
     }
 
     public int getJogoQueVendeuMais() {
-        return JogoQueVendeuMais;
+        return jogoQueVendeuMais;
     }
 
-    public void setJogoQueVendeuMais(int JogoQueVendeuMais) {
-        this.JogoQueVendeuMais = JogoQueVendeuMais;
+    public void setJogoQueVendeuMais(int jogoQueVendeuMais) {
+        this.jogoQueVendeuMais = jogoQueVendeuMais;
     }
-    
 }
