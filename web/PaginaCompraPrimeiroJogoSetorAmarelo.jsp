@@ -11,7 +11,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css"/>
         <!-- Importação para icone da imagem-->
-        <link rel="icon" href="img/Icon-ticket.png" type="image/x-icon"/>
+        <link rel="icon" href="img/Cash-icon.png" type="image/x-icon"/>
         <title>Página de compra</title>
     </head>
     <body>
@@ -33,7 +33,7 @@
                                 <dt>
                                     <div class="form-group">
                                         <label class="control-label">Digite seu id de usuário:</label>
-                                        <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"  />
+                                        <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"/>
                                     </div>
                                 </dt>
                                 <dt>Quantidade :</dt>
@@ -42,14 +42,12 @@
                                 </select>
                                 <dt>Preço:</dt>
                                 <dd> R$ 25.00</dd>
-                                <dt>
-                                    <button type="submit" class="btn btn-primary " action="CompraIngressoServlet">
-                                        <a class="btn-default btn-primary">
-                                        <span class="glyphicon glyphicon-thumbs-up" />
+                                <dd>
+                                    <button type="submit" class="btn btn-primary btn-lg " action="CompraIngressoServlet">
+                                        <span class="glyphicon glyphicon-thumbs-up"/>
                                         Compra definitiva
-                                        </a>
                                     </button>
-                                </dt>
+                                </dd>
                             </dl>
                         </div>
                     </form>
@@ -58,7 +56,6 @@
             <div class="col-md-5">
             </div>
         </div>
-
     </body>
     <div class="arrumarFooterPaginaCompraCerteza"></div>
     <c:import url="Rodape.jsp"/>

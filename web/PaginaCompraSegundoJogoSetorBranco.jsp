@@ -43,11 +43,9 @@
                         <dd>R$ 50.00</dd>
                         <div class="paddingArrumaBotaoPaginaCompraCerteza">
                         </div>
-                        <button type="submit" class="btn btn-primary "> 
-                            <a href="PaginaInicial.jsp" class="btn-default btn-primary">
+                        <button type="submit" class="btn btn-primary" action="CompraIngressoServlet">
                                 <span class="glyphicon glyphicon-thumbs-up"></span>
                                 Compra definitiva
-                            </a>
                         </button>
                     </form>
                 </div>

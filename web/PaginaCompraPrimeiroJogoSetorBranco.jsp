@@ -31,7 +31,7 @@
                         <img src="img/Icon-ticket.png" class="img-responsive img-thumbnail">
                         <dl>
                             <label class="control-label">Digite seu id de usuário:</label>
-                            <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"  value=""/>
+                            <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"/>
                         </dl>
                     </div>
                     <dt>Quantidade :</dt>
@@ -42,11 +42,9 @@
                     <dd>R$ 45.00</dd>
                     <div class="paddingArrumaBotaoPaginaCompraCerteza">
                     </div>
-                    <button type="submit" class="btn btn-primary "> 
-                        <a  class="btn-default btn-primary">
+                    <button type="submit" class="btn btn-primary " action="CompraIngressoServlet"> 
                             <span class="glyphicon glyphicon-thumbs-up"></span>
                             Compra definitiva
-                        </a>
                     </button>
                     </form>
                 </div>

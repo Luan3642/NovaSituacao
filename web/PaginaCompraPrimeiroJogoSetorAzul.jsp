@@ -11,7 +11,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css"/>
         <!-- Importação para icone da imagem-->
-        <link rel="icon" href="img/Icon-ticket.png" type="image/x-icon"/>
+        <link rel="icon" href="img/Cash-icon.png" type="image/x-icon"/>
         <title>Página de compra</title>
     </head>
     <body>
@@ -19,7 +19,7 @@
         <c:import url="Cabecalho.jsp"/>
         <div class="paddingArrumarPaginaCompraCerteza"></div>
         <div class="row container">
-            <div class="col-md-5">
+            <div class="col-md-5"></div>
                 <div class="col-md-5">
                     <!-- Painel de compra-->
                     <div class="panel panel-default">
@@ -31,26 +31,21 @@
                                 <img src="img/Icon-ticket.png" class="img-responsive img-thumbnail"/>
                                 <dl>
                                     <label class="control-label">Digite seu id de usuário:</label>
-                                    <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"  value=""/>
+                                    <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"/>
                                 </dl>
                             </div>
-
-                            <dt>Quantidade :</dt>
-                            <select name="qntdeVenda">
-                                <option value="1">1</option> 
-                            </select>
-                            <dt>Preço:</dt>
-                            <dd>R$ 25.00</dd>
-                            <dt>
-                                <div class="paddingArrumaBotaoPaginaCompraCerteza">
-                                </div>
-                                <button type="submit" class="btn btn-primary"> 
-                                    <a  class="btn-default btn-primary">
-                                        <span  class="glyphicon glyphicon-thumbs-up"></span>
+                             <dt>Quantidade :</dt>
+                                <select name="qntdeVenda">
+                                    <option value="1">1</option>
+                                </select>
+                                <dt>Preço:</dt>
+                                <dd> R$ 25.00</dd>
+                                <dd>
+                                    <button type="submit" class="btn btn-primary btn-lg " action="CompraIngressoServlet">
+                                        <span class="glyphicon glyphicon-thumbs-up"/>
                                         Compra definitiva
-                                    </a>
-                                </button>
-                            </dt>
+                                    </button>
+                                </dd>
                         </form>
                     </div>
                 </div>

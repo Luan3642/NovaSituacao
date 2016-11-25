@@ -53,22 +53,7 @@ public class IngressoDao {
         }
         return idIngresso;
     }
-
-    public void adicionarVenda(VendaModel vendaModel) {
-        String sqll = "INSERT INTO VENDA(ID_INGRESSO,ID_CLIENTE,QTDE_V) VALUES (?,?,?)";
-        try {
-            stmt = conecta.prepareStatement(sqll);
-            stmt.setInt(1, vendaModel.getIdIngresso());
-            stmt.setInt(2, vendaModel.getIdCliente());
-            stmt.setInt(3, vendaModel.getQntdeVenda());
-            stmt.execute();
-            stmt.close();
-        } catch (SQLException e) {
-            System.out.println(" Erro ao confirmar a venda " + e);
-        }
-    }
-
-   
+    
         public void removerIngresso(VendaModel venda) {
         String sql = "DELETE FROM VENDA WHERE ID = ?";
         
@@ -82,31 +67,6 @@ public class IngressoDao {
         }
     }
     
-
-    public List<IngressoModel> getLista() throws SQLException {
-        List<IngressoModel> ListaIngresso = new ArrayList<>();
-
-        String sql = "SELECT * FROM INGRESSO";
-
-        try {
-            stmt = conecta.prepareStatement(sql);
-            rs = stmt.executeQuery();
-            while (rs.next()) {
-                IngressoModel IngressoModel = new IngressoModel();
-                IngressoModel.setQtdeLot(rs.getInt("qtde_v"));
-                IngressoModel.setSetorIngresso(rs.getInt("setorIngresso"));
-                IngressoModel.setJogoIngresso(rs.getInt("JogoIngresso"));
-                IngressoModel.setValorIngresso(rs.getDouble("valorIngresso"));
-                
-            }
-            stmt.close();
-            return ListaIngresso;
-        } catch (SQLException e) {
-            System.out.println("Erro no SQL" + e);
-            return null;
-        }
-    }
-
     public int recuperaIdVenda() {
         int idVenda = 0;
         String sql = ("SELECT * from venda ORDER BY ID_VENDA DESC LIMIT 1");

@@ -6,6 +6,7 @@
             <li><a href="CompraIngresso.jsp">COMPRAR INGRESSO</a></li>
             <li><a href="Tabela.jsp">TABELA DE PREÇOS</a></li>
             <li><a href="ListaCliente.jsp">LISTAR CLIENTE</a></li>
+            <li><a href="ListarVenda.jsp">LISTAR VENDAS</a></li>
         </ul>  
     </div>        
 </nav>

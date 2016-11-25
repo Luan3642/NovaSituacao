@@ -8,6 +8,7 @@ package br.com.alldirect.servlet;
 import br.com.alldirect.dao.ClienteDao;
 import br.com.alldirect.dao.IngressoDao;
 import br.com.alldirect.dao.SetorJogoLotadoDao;
+import br.com.alldirect.dao.VendaDao;
 import br.com.alldirect.model.IngressoModel;
 import br.com.alldirect.model.VendaModel;
 import java.io.IOException;
@@ -30,7 +31,7 @@ public class CompraIngressoServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         IngressoDao ingressoDao = new IngressoDao();
-        
+
         int idIngresso = ingressoDao.recuperaIdIngresso();
         int qntdeVenda = Integer.parseInt(request.getParameter("qntdeVenda"));
         int idCliente = Integer.parseInt(request.getParameter("idCliente"));
@@ -39,17 +40,19 @@ public class CompraIngressoServlet extends HttpServlet {
         System.out.println("Quntidade " + qntdeVenda);
         System.out.println("Cliente " + idCliente);
 
-            VendaModel venda = new VendaModel();
+        VendaModel venda = new VendaModel();
 
-            venda.setIdIngresso(idIngresso);
-            venda.setIdCliente(idCliente);
-            venda.setQntdeVenda(qntdeVenda);
+        venda.setIdIngresso(idIngresso);
+        venda.setIdCliente(idCliente);
+        venda.setQntdeVenda(qntdeVenda);
 
-            IngressoDao vendaDao = new IngressoDao();
-            vendaDao.adicionarVenda(venda);
-            
-            RequestDispatcher rd = request.getRequestDispatcher("/PaginaInicial.jsp");
-            rd.forward(request, response);
-            
+        VendaDao vendaDao = new VendaDao();
+        vendaDao.adicionarVenda(venda);
+
+        RequestDispatcher rd = request.getRequestDispatcher("/PaginaInicial.jsp");
+        rd.forward(request, response);
+
+        
+        
     }
 }
