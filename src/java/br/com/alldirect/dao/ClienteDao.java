@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.alldirect.dao;
 
 import br.com.alldirect.connection.ConnectionFactory;
@@ -14,11 +9,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Aluno
- */
 public class ClienteDao {
+
     private PreparedStatement stmt;
     private ResultSet rs;
     private Connection conecta;
@@ -27,6 +19,7 @@ public class ClienteDao {
         this.conecta = new ConnectionFactory().getConnection();
     }
 
+    // Método adiciona cliente
     public void adicionarCliente(ClienteModel cliente) throws SQLException {
         String sql = "INSERT INTO CLIENTE(NOME_CLI,"
                 + "CPF_CLI, "
@@ -57,43 +50,35 @@ public class ClienteDao {
             stmt.execute();
             stmt.close();
         } catch (SQLException e) {
-            System.out.println(" Erro ao adicionar o cliente" +e );
+            System.out.println(" Erro ao adicionar o cliente" + e);
         }
     }
 
-    public void removerCliente() {
-
-    }
-
-    public List <ClienteModel> getLista() throws SQLException {
+    // Método listar cliente
+    public List<ClienteModel> getLista() throws SQLException {
         List<ClienteModel> listaCliente = new ArrayList<>();
-            String sql = "SELECT * FROM CLIENTE";
-            try{
-                stmt = conecta.prepareStatement(sql);
-                rs = stmt.executeQuery();
-                while (rs.next()){
-                    ClienteModel clienteModel = new ClienteModel();
-                    clienteModel.setIdCliente(rs.getInt("ID_CLI"));
-                    clienteModel.setCpfCliente(rs.getInt("CPF_CLI"));
-                    clienteModel.setIdade(rs.getInt("IDADE_CLI"));
-                    clienteModel.setClientePais(rs.getString("CLIENTE_PAIS"));
-                    clienteModel.setNomeCliente(rs.getString("NOME_CLI"));
-                    clienteModel.setSexoCliente(rs.getString("SEXO_CLI"));
-                    clienteModel.setComplemento(rs.getString("COMPLEMENTO"));
-                    clienteModel.setBairro(rs.getString("BAIRRO"));
-                    clienteModel.setEstado(rs.getString("ESTADO"));
-                    listaCliente.add(clienteModel);
-                }
-                stmt.close();
-                return listaCliente;
-            } catch(SQLException e){
-                System.out.println("Erro no SQL " +e);
-                return null;
-                
+        String sql = "SELECT * FROM CLIENTE";
+        try {
+            stmt = conecta.prepareStatement(sql);
+            rs = stmt.executeQuery();
+            while (rs.next()) {
+                ClienteModel clienteModel = new ClienteModel();
+                clienteModel.setIdCliente(rs.getInt("ID_CLI"));
+                clienteModel.setCpfCliente(rs.getInt("CPF_CLI"));
+                clienteModel.setIdade(rs.getInt("IDADE_CLI"));
+                clienteModel.setClientePais(rs.getString("CLIENTE_PAIS"));
+                clienteModel.setNomeCliente(rs.getString("NOME_CLI"));
+                clienteModel.setSexoCliente(rs.getString("SEXO_CLI"));
+                clienteModel.setComplemento(rs.getString("COMPLEMENTO"));
+                clienteModel.setBairro(rs.getString("BAIRRO"));
+                clienteModel.setEstado(rs.getString("ESTADO"));
+                listaCliente.add(clienteModel);
             }
-          }
-          public void alterarCliente(){
-              
-          }
-    
+            stmt.close();
+            return listaCliente;
+        } catch (SQLException e) {
+            System.out.println("Erro no SQL " + e);
+            return null;
+        }
+    }
 }

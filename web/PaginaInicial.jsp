@@ -94,6 +94,7 @@
                 </div>
             </div>
         </div>
+        <!-- Importação para o Rodapé-->
         <c:import url="Rodape.jsp"/>
     </body>
 </html>

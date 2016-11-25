@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.alldirect.dao;
 
 import br.com.alldirect.connection.ConnectionFactory;
@@ -11,10 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- *
- * @author Aluno
- */
 public class QntdVendidoDao {
 
     private PreparedStatement stmt;
@@ -24,6 +15,7 @@ public class QntdVendidoDao {
     public QntdVendidoDao() {
         this.conecta = new ConnectionFactory().getConnection();
     }
+
     //setor mais lotado jogo 2
     public int setorAmareloJogo2() {
         int qntdVendidoSet1 = 0;
@@ -41,8 +33,9 @@ public class QntdVendidoDao {
         }
         return qntdVendidoSet1;
     }
+
     public int setorAzulJogo2() {
-         int qntdVendidoSet2 = 0;
+        int qntdVendidoSet2 = 0;
         String sql = "SELECT count(setor) FROM sallv.ingresso where jogo = 2 and setor = 2";
         try {
             stmt = conecta.prepareStatement(sql);
@@ -57,6 +50,7 @@ public class QntdVendidoDao {
         }
         return qntdVendidoSet2;
     }
+
     public int setorVerdeJogo2() {
         int qntdVendidoSet3 = 0;
         String sql = "SELECT count(setor) FROM sallv.ingresso where jogo = 2 and setor = 3";
@@ -73,6 +67,7 @@ public class QntdVendidoDao {
         }
         return qntdVendidoSet3;
     }
+
     public int setorBrancoJogo2() {
         int qntdVendidoSet4 = 0;
         String sql = "SELECT count(setor) FROM sallv.ingresso where jogo = 2 and setor = 4";
@@ -81,7 +76,7 @@ public class QntdVendidoDao {
             rs = stmt.executeQuery();
             while (rs.next()) {
                 qntdVendidoSet4 = (rs.getInt("count(setor)"));
-                
+
             }
             stmt.close();
             return qntdVendidoSet4;
@@ -90,8 +85,9 @@ public class QntdVendidoDao {
         }
         return qntdVendidoSet4;
     }
+
     //jogo que vendeu mais
-    public int vendasSegundoJogo(){
+    public int vendasSegundoJogo() {
         int jogoQueVendeuMais = 0;
         String sql = "SELECT count(jogo) FROM sallv.ingresso where jogo = 2;";
         try {
@@ -99,7 +95,7 @@ public class QntdVendidoDao {
             rs = stmt.executeQuery();
             while (rs.next()) {
                 jogoQueVendeuMais = (rs.getInt("count(jogo)"));
-                
+
             }
             stmt.close();
             return jogoQueVendeuMais;
@@ -108,7 +104,8 @@ public class QntdVendidoDao {
         }
         return jogoQueVendeuMais;
     }
-    public int vendasPrimeiroJogo(){
+
+    public int vendasPrimeiroJogo() {
         int jogoQueVendeuMais = 0;
         String sql = "SELECT count(jogo) FROM sallv.ingresso where jogo = 1;";
         try {
@@ -116,7 +113,6 @@ public class QntdVendidoDao {
             rs = stmt.executeQuery();
             while (rs.next()) {
                 jogoQueVendeuMais = (rs.getInt("count(jogo)"));
-                
             }
             stmt.close();
             return jogoQueVendeuMais;
@@ -125,8 +121,9 @@ public class QntdVendidoDao {
         }
         return jogoQueVendeuMais;
     }
+
     // valor total dos ingressos vendidos
-    public double somaVendaDosJogos(){
+    public double somaVendaDosJogos() {
         double somaDasVendasJogos = 0;
         String sql = "SELECT sum(valor) FROM sallv.ingresso";
         try {
@@ -134,7 +131,6 @@ public class QntdVendidoDao {
             rs = stmt.executeQuery();
             while (rs.next()) {
                 somaDasVendasJogos = (rs.getInt("sum(valor)"));
-                
             }
             stmt.close();
             return somaDasVendasJogos;
@@ -143,5 +139,4 @@ public class QntdVendidoDao {
         }
         return somaDasVendasJogos;
     }
-}   
-
+}

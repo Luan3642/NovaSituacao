@@ -2,13 +2,10 @@ package br.com.alldirect.dao;
 
 import br.com.alldirect.connection.ConnectionFactory;
 import br.com.alldirect.model.IngressoModel;
-import br.com.alldirect.model.VendaModel;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class IngressoDao {
 
@@ -53,17 +50,18 @@ public class IngressoDao {
         }
         return idIngresso;
     }
-    
-        public void removerIngresso(int id) {
+
+    //Método remover ingresso
+    public void removerIngresso(int id) {
         String sql = "DELETE FROM VENDA WHERE ID_VENDA = ?";
-        
-        try{
+
+        try {
             PreparedStatement stmt = conecta.prepareStatement(sql);
-            stmt.setInt(1,id);
+            stmt.setInt(1, id);
             stmt.execute();
             stmt.close();
-        }catch (SQLException e){
-            System.out.println("Erro ao excluir venda!\n" + e);            
+        } catch (SQLException e) {
+            System.out.println("Erro ao excluir venda!\n" + e);
         }
     }
 }

@@ -11,27 +11,26 @@ package br.com.alldirect.model;
  */
 public class SetorModel {
     
+    //Atributos
     private int idSetor;
     private String nomeSetor;
     private int jogo;
     private String preco;
-
+    
+    
+    //Métodos Getters e Setters
     public int getIdSetor() {
         return idSetor;
     }
-
     public void setIdSetor(int idSetor) {
         this.idSetor = idSetor;
     }
-
     public String getNomeSetor() {
         return nomeSetor;
     }
-
     public void setNomeSetor(String nomeSetor) {
         this.nomeSetor = nomeSetor;
     }
-
     public int getJogo() {
         return jogo;
     }
@@ -44,5 +43,4 @@ public class SetorModel {
     public void setPreco(String preco) {
         this.preco = preco;
     }
-    
 }

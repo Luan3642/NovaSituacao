@@ -11,7 +11,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/estiloProprio.css"/>
         <!-- Importação para icone da imagem-->
-        <link rel="icon" href="img/Icon-ticket.png" type="image/x-icon"/>
+        <link rel="icon" href="img/Cash-icon.png" type="image/x-icon"/>
         <title>Página de compra</title>
     </head>
     <body>
@@ -28,32 +28,36 @@
                             <h2 class="painel-title">Descrição</h2>
                         </div>
                         <div class="panel-body">
-                            <img src="img/Icon-ticket.png" class="img-responsive img-thumbnail">
+                            <img src="img/Icon-ticket.png" class="img-responsive img-thumbnail" />
                             <dl>
-                                <label class="control-label">Digite seu id de usuário:</label>
-                                <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"  value=""/>
+                                <dt>
+                                    <div class="form-group">
+                                        <label class="control-label">Digite seu id de usuário:</label>
+                                        <input class="form-control" placeholder="Digite seu id de usuário" name="idCliente"/>
+                                    </div>
+                                </dt>
+                                <dt>Quantidade:</dt>
+                                <select name="qntdeVenda">
+                                    <option value="1">1</option>
+                                </select>
+                                <dt>Preço:</dt>
+                                <dd>R$ 45.00</dd>
+                                <dd>
+                                    <button type="submit" class="btn btn-primary btn-lg " action="CompraIngressoServlet">
+                                        <span class="glyphicon glyphicon-thumbs-up"/>
+                                        Compra definitiva
+                                    </button>
+                                </dd>
                             </dl>
                         </div>
-                        <dt>Quantidade :</dt>
-                        <select name="qntdeVenda">
-                            <option value="1">1</option>
-                        </select>
-                        <dt>Preço:</dt>
-                        <dd>R$ 45.00</dd>
-                        <div class="paddingArrumaBotaoPaginaCompraCerteza">
-                        </div>
-                        <button type="submit" class="btn btn-primary " action="CompraIngressoServlet" > 
-                                <span class="glyphicon glyphicon-thumbs-up"></span>
-                                Compra definitiva
-                        </button>
-                    </form>                            
+                    </form>
                 </div>
             </div>
+            <div class="col-md-5">
+            </div>
         </div>
-        <div class="col-md-5">
-        </div>
-    </div>
-</body>
-<div class="arrumarFooterPaginaCompra"></div>
-<c:import url="Rodape.jsp"/>
+    </body>
+    <!-- Importação para rodapé-->
+    <div class="arrumarFooterPaginaCompraCerteza"></div>
+    <c:import url="Rodape.jsp"/>
 </html>

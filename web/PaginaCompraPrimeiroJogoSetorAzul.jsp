@@ -41,7 +41,7 @@
                                     <option value="1">1</option>
                                 </select>
                                 <dt>Preço:</dt>
-                                <dd> R$ 25.00</dd>
+                                <dd>R$ 25.00</dd>
                                 <dd>
                                     <button type="submit" class="btn btn-primary btn-lg " action="CompraIngressoServlet">
                                         <span class="glyphicon glyphicon-thumbs-up"/>
@@ -57,6 +57,7 @@
             </div>
         </div>
     </body>
+    <!-- Importação para rodapé-->
     <div class="arrumarFooterPaginaCompraCerteza"></div>
     <c:import url="Rodape.jsp"/>
 </html>

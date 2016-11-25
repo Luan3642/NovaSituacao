@@ -23,164 +23,161 @@ public class ControlePreco extends HttpServlet {
 
         String jogoIngresso = request.getParameter("jogoIngresso");
         String setorIngresso = request.getParameter("setorIngresso");
-        
 
         if (jogoIngresso.equals("1") && setorIngresso.equals("1")) {
             RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraPrimeiroJogoSetorAmarelo.jsp");
             rd.forward(request, response);
-            
-        int setorIng = Integer.parseInt(request.getParameter("setorIngresso"));
-        Double valorIngresso = 25.00;//Double.parseDouble(request.getParameter("valorIngresso"));
-        int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
-        
-        
 
-        IngressoModel IngressoModel = new IngressoModel();
-        IngressoModel.setSetorIngresso(setorIng);
-        IngressoModel.setJogoIngresso(jogoIng);
-        IngressoModel.setValorIngresso(valorIngresso);
+            int setorIng = Integer.parseInt(request.getParameter("setorIngresso"));
+            Double valorIngresso = 25.00;
+            int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
 
-        try {
-            IngressoDao IngressoDao = new IngressoDao();
-            IngressoDao.adicionarIngresso(IngressoModel);
-        } catch (SQLException ex) {
-            Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+            IngressoModel IngressoModel = new IngressoModel();
+            IngressoModel.setSetorIngresso(setorIng);
+            IngressoModel.setJogoIngresso(jogoIng);
+            IngressoModel.setValorIngresso(valorIngresso);
+
+            try {
+                IngressoDao IngressoDao = new IngressoDao();
+                IngressoDao.adicionarIngresso(IngressoModel);
+            } catch (SQLException ex) {
+                Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
         }
         if (jogoIngresso.equals("1") && setorIngresso.equals("2")) {
             RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraPrimeiroJogoSetorAzul.jsp");
             rd.forward(request, response);
             int setorIng = Integer.parseInt(request.getParameter("setorIngresso"));
-        Double valorIngresso = 25.00;//Double.parseDouble(request.getParameter("valorIngresso"));
-        int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
+            Double valorIngresso = 25.00;
+            int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
 
-        IngressoModel IngressoModel = new IngressoModel();
-        IngressoModel.setSetorIngresso(setorIng);
-        IngressoModel.setJogoIngresso(jogoIng);
-        IngressoModel.setValorIngresso(valorIngresso);
+            IngressoModel IngressoModel = new IngressoModel();
+            IngressoModel.setSetorIngresso(setorIng);
+            IngressoModel.setJogoIngresso(jogoIng);
+            IngressoModel.setValorIngresso(valorIngresso);
 
-        try {
-            IngressoDao IngressoDao = new IngressoDao();
-            IngressoDao.adicionarIngresso(IngressoModel);
-        } catch (SQLException ex) {
-            Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            try {
+                IngressoDao IngressoDao = new IngressoDao();
+                IngressoDao.adicionarIngresso(IngressoModel);
+            } catch (SQLException ex) {
+                Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
         }
         if (jogoIngresso.equals("1") && setorIngresso.equals("3")) {
             RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraPrimeiroJogoSetorVerde.jsp");
             rd.forward(request, response);
             int setorIng = Integer.parseInt(request.getParameter("setorIngresso"));
-        Double valorIngresso = 45.00;//Double.parseDouble(request.getParameter("valorIngresso"));
-        int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
+            Double valorIngresso = 45.00;
+            int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
 
-        IngressoModel IngressoModel = new IngressoModel();
-        IngressoModel.setSetorIngresso(setorIng);
-        IngressoModel.setJogoIngresso(jogoIng);
-        IngressoModel.setValorIngresso(valorIngresso);
+            IngressoModel IngressoModel = new IngressoModel();
+            IngressoModel.setSetorIngresso(setorIng);
+            IngressoModel.setJogoIngresso(jogoIng);
+            IngressoModel.setValorIngresso(valorIngresso);
 
-        try {
-            IngressoDao IngressoDao = new IngressoDao();
-            IngressoDao.adicionarIngresso(IngressoModel);
-        } catch (SQLException ex) {
-            Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            try {
+                IngressoDao IngressoDao = new IngressoDao();
+                IngressoDao.adicionarIngresso(IngressoModel);
+            } catch (SQLException ex) {
+                Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if (jogoIngresso.equals("1") && setorIngresso.equals("4")) {
             RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraPrimeiroJogoSetorBranco.jsp");
             rd.forward(request, response);
             int setorIng = Integer.parseInt(request.getParameter("setorIngresso"));
-        Double valorIngresso = 45.00;//Double.parseDouble(request.getParameter("valorIngresso"));
-        int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
+            Double valorIngresso = 45.00;
+            int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
 
-        IngressoModel IngressoModel = new IngressoModel();
-        IngressoModel.setSetorIngresso(setorIng);
-        IngressoModel.setJogoIngresso(jogoIng);
-        IngressoModel.setValorIngresso(valorIngresso);
+            IngressoModel IngressoModel = new IngressoModel();
+            IngressoModel.setSetorIngresso(setorIng);
+            IngressoModel.setJogoIngresso(jogoIng);
+            IngressoModel.setValorIngresso(valorIngresso);
 
-        try {
-            IngressoDao IngressoDao = new IngressoDao();
-            IngressoDao.adicionarIngresso(IngressoModel);
-        } catch (SQLException ex) {
-            Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            try {
+                IngressoDao IngressoDao = new IngressoDao();
+                IngressoDao.adicionarIngresso(IngressoModel);
+            } catch (SQLException ex) {
+                Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if (jogoIngresso.equals("2") && setorIngresso.equals("1")) {
             RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraSegundoJogoSetorAmarelo.jsp");
             rd.forward(request, response);
             int setorIng = Integer.parseInt(request.getParameter("setorIngresso"));
-        Double valorIngresso = 30.00;//Double.parseDouble(request.getParameter("valorIngresso"));
-        int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
+            Double valorIngresso = 30.00;
+            int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
 
-        IngressoModel IngressoModel = new IngressoModel();
-        IngressoModel.setSetorIngresso(setorIng);
-        IngressoModel.setJogoIngresso(jogoIng);
-        IngressoModel.setValorIngresso(valorIngresso);
+            IngressoModel IngressoModel = new IngressoModel();
+            IngressoModel.setSetorIngresso(setorIng);
+            IngressoModel.setJogoIngresso(jogoIng);
+            IngressoModel.setValorIngresso(valorIngresso);
 
-        try {
-            IngressoDao IngressoDao = new IngressoDao();
-            IngressoDao.adicionarIngresso(IngressoModel);
-        } catch (SQLException ex) {
-            Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            try {
+                IngressoDao IngressoDao = new IngressoDao();
+                IngressoDao.adicionarIngresso(IngressoModel);
+            } catch (SQLException ex) {
+                Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if (jogoIngresso.equals("2") && setorIngresso.equals("2")) {
             RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraSegundoJogoSetorAzul.jsp");
             rd.forward(request, response);
             int setorIng = Integer.parseInt(request.getParameter("setorIngresso"));
-        Double valorIngresso = 30.00;//Double.parseDouble(request.getParameter("valorIngresso"));
-        int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
+            Double valorIngresso = 30.00;
+            int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
 
-        IngressoModel IngressoModel = new IngressoModel();
-        IngressoModel.setSetorIngresso(setorIng);
-        IngressoModel.setJogoIngresso(jogoIng);
-        IngressoModel.setValorIngresso(valorIngresso);
+            IngressoModel IngressoModel = new IngressoModel();
+            IngressoModel.setSetorIngresso(setorIng);
+            IngressoModel.setJogoIngresso(jogoIng);
+            IngressoModel.setValorIngresso(valorIngresso);
 
-        try {
-            IngressoDao IngressoDao = new IngressoDao();
-            IngressoDao.adicionarIngresso(IngressoModel);
-        } catch (SQLException ex) {
-            Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            try {
+                IngressoDao IngressoDao = new IngressoDao();
+                IngressoDao.adicionarIngresso(IngressoModel);
+            } catch (SQLException ex) {
+                Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if (jogoIngresso.equals("2") && setorIngresso.equals("3")) {
             RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraSegundoJogoSetorVerde.jsp");
             rd.forward(request, response);
             int setorIng = Integer.parseInt(request.getParameter("setorIngresso"));
-        Double valorIngresso = 50.00;//Double.parseDouble(request.getParameter("valorIngresso"));
-        int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
+            Double valorIngresso = 50.00;
+            int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
 
-        IngressoModel IngressoModel = new IngressoModel();
-        IngressoModel.setSetorIngresso(setorIng);
-        IngressoModel.setJogoIngresso(jogoIng);
-        IngressoModel.setValorIngresso(valorIngresso);
+            IngressoModel IngressoModel = new IngressoModel();
+            IngressoModel.setSetorIngresso(setorIng);
+            IngressoModel.setJogoIngresso(jogoIng);
+            IngressoModel.setValorIngresso(valorIngresso);
 
-        try {
-            IngressoDao IngressoDao = new IngressoDao();
-            IngressoDao.adicionarIngresso(IngressoModel);
-        } catch (SQLException ex) {
-            Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            try {
+                IngressoDao IngressoDao = new IngressoDao();
+                IngressoDao.adicionarIngresso(IngressoModel);
+            } catch (SQLException ex) {
+                Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if (jogoIngresso.equals("2") && setorIngresso.equals("4")) {
             RequestDispatcher rd = request.getRequestDispatcher("/PaginaCompraSegundoJogoSetorBranco.jsp");
             rd.forward(request, response);
             int setorIng = Integer.parseInt(request.getParameter("setorIngresso"));
-        Double valorIngresso = 50.00;//Double.parseDouble(request.getParameter("valorIngresso"));
-        int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
+            Double valorIngresso = 50.00;
+            int jogoIng = Integer.parseInt(request.getParameter("jogoIngresso"));
 
-        IngressoModel IngressoModel = new IngressoModel();
-        IngressoModel.setSetorIngresso(setorIng);
-        IngressoModel.setJogoIngresso(jogoIng);
-        IngressoModel.setValorIngresso(valorIngresso);
+            IngressoModel IngressoModel = new IngressoModel();
+            IngressoModel.setSetorIngresso(setorIng);
+            IngressoModel.setJogoIngresso(jogoIng);
+            IngressoModel.setValorIngresso(valorIngresso);
 
-        try {
-            IngressoDao IngressoDao = new IngressoDao();
-            IngressoDao.adicionarIngresso(IngressoModel);
-        } catch (SQLException ex) {
-            Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            try {
+                IngressoDao IngressoDao = new IngressoDao();
+                IngressoDao.adicionarIngresso(IngressoModel);
+            } catch (SQLException ex) {
+                Logger.getLogger(ClienteServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
 }

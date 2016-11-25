@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionFactory {
-
+    
     //Classe de conexão 
     public Connection getConnection() {
         try {

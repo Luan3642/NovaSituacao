@@ -18,15 +18,16 @@
         <jsp:useBean id= "regra" class="br.com.alldirect.controller.RegrasNegocio"/>
         <!-- Importação cabeçalho-->
         <c:import url="Cabecalho.jsp"/>
-        <div style="padding-top:70px;"></div>
+        <div style="padding-top: 70px;"></div>
         <table class="table">
             <thead>
                 <tr allign="center">
-                    <th >O setor que mais vendeu no segundo jogo foi : </th>
+                    <th >O setor que mais vendeu no segundo jogo foi:</th>
                     <th>O valor total dos ingressos vendidos é:</th>
-                    <th>O jogo que vendeu mais foi : </th>
+                    <th>O jogo que vendeu mais foi:</th>
                 </tr>
             <tbody>
+                <!-- ForEach vai percorrer o método listar-->
                 <c:forEach var="r" items="${regra.lista}">
                     <tr>
                         <th scope="row">${r.setorMaisVendidoJogoDois}</th>

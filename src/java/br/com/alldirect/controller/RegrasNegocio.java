@@ -1,8 +1,3 @@
-/* Sem kibe zé buceta
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.alldirect.controller;
 
 import br.com.alldirect.connection.ConnectionFactory;
@@ -14,10 +9,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Aluno
- */
 public class RegrasNegocio {
 
     private PreparedStatement stmt;
@@ -28,17 +19,11 @@ public class RegrasNegocio {
         this.conecta = new ConnectionFactory().getConnection();
     }
 
-    /**
-     *
-     *
-     *  
-     * @return 
-     */
     public List<ResultadoModel> getLista() {
 
         List<ResultadoModel> result = new ArrayList<>();
         ResultadoModel resultadoModel = new ResultadoModel();
-        
+
         String resultado = ("");
         int JogoQueVendeuMais = 0;
         double SomaVendaDosJogos;
@@ -51,16 +36,16 @@ public class RegrasNegocio {
         int setorBranco = qntVendidoDao.setorBrancoJogo2();
 
         if (setorAmarelo > setorVerde && setorAmarelo > setorAzul && setorAmarelo > setorBranco) {
-             resultado = (" O setor Amarelo ");
+            resultado = (" O setor Amarelo ");
         }
         if (setorVerde > setorAmarelo && setorVerde > setorAzul && setorVerde > setorBranco) {
-             resultado = ("O setor Verde ");
+            resultado = ("O setor Verde ");
         }
         if (setorAzul > setorAmarelo && setorAzul > setorVerde && setorAzul > setorBranco) {
             resultado = ("O setor Azul ");
         }
         if (setorBranco > setorAmarelo && setorBranco > setorVerde && setorBranco > setorAzul) {
-             resultado = ("O setor Branco ");
+            resultado = ("O setor Branco ");
         }
         // jogo que mais vendeu
         int vendaJogoDois = qntVendidoDao.vendasSegundoJogo();
