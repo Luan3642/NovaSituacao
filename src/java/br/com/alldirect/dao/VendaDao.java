@@ -70,10 +70,10 @@ public class VendaDao {
                 rs = stmt.executeQuery();
                 while (rs.next()){
                     VendaModel vendaModel = new VendaModel();
-                    vendaModel.setIdCliente(rs.getInt("ID_CLI"));
-                    vendaModel.setIdIngresso(rs.getInt(""));
-                    vendaModel.setIdVenda(rs.getInt(""));
-                    vendaModel.setQntdeVenda(rs.getInt(""));
+                    vendaModel.setIdCliente(rs.getInt("ID_CLIENTE"));
+                    vendaModel.setIdIngresso(rs.getInt("ID_INGRESSO"));
+                    vendaModel.setIdVenda(rs.getInt("ID_VENDA"));
+                    vendaModel.setQntdeVenda(rs.getInt("QTDE_V"));
                     listaVenda.add(vendaModel);
                 }
                 stmt.close();

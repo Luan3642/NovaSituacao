@@ -54,33 +54,16 @@ public class IngressoDao {
         return idIngresso;
     }
     
-        public void removerIngresso(VendaModel venda) {
-        String sql = "DELETE FROM VENDA WHERE ID = ?";
+        public void removerIngresso(int id) {
+        String sql = "DELETE FROM VENDA WHERE ID_VENDA = ?";
         
         try{
             PreparedStatement stmt = conecta.prepareStatement(sql);
-            stmt.setInt(1,venda.getIdVenda());
+            stmt.setInt(1,id);
             stmt.execute();
             stmt.close();
         }catch (SQLException e){
-            System.out.println("Erro ao excluir \n" + e);            
+            System.out.println("Erro ao excluir venda!\n" + e);            
         }
-    }
-    
-    public int recuperaIdVenda() {
-        int idVenda = 0;
-        String sql = ("SELECT * from venda ORDER BY ID_VENDA DESC LIMIT 1");
-        try {
-            stmt = conecta.prepareStatement(sql);
-            rs = stmt.executeQuery();
-            while (rs.next()) {
-                idVenda = (rs.getInt("id_VENDA"));
-            }
-            stmt.close();
-            //return idIngresso;
-        } catch (SQLException e) {
-            System.out.println(" Erro ao obter o id do ingresso \n" + e);
-        }
-        return idVenda;
     }
 }

@@ -13,32 +13,35 @@
     </head>
     <body>
         <c:import url="Cabecalho.jsp"/>
+        <form action="VendaServlet" method="GET">
         <div style="padding-top: 70px;">
         </div>
         <jsp:useBean id="dao" class="br.com.alldirect.dao.VendaDao"/>
         <table class="table">
             <thead>
                 <tr>
+                    <th>Quantidade vendida:</th>
                     <th>Id cliente:</th>
                     <th>Id ingresso:</th>
                     <th>Id venda:</th>
-                    <th>Quantidade de vendas:</th>
             </thead>
             <tbody>
                 <c:forEach var="c" items="${dao.lista}">
                     <tr>
-                        <th scope="row">${c.}</th>
-                        <td>${c.}</td>
-                        <td>${c.}</td>
-                        <th>${c.}</th>
-                        <td>${c.}</td>
-                        <td>${c.}</td>
-                        <td>${c.}</td>
-                        <td>${c.}</td>
-                    </c:forEach>
+                        <th scope="row">${c.qntdeVenda}</th>
+                        <td>${c.idCliente}</td>
+                        <td>${c.idIngresso}</td>
+                        <th>${c.idVenda} <a href="VendaServlet?acao=Excluir&id=${c.idVenda}" 
+                                            <button type="submit" class="btn btn-danger ">
+                                    <span class="glyphicon glyphicon-remove-sign"></span>
+                                    Excluir venda
+                                </button></th>
+                            </c:forEach>
             </tbody>
         </table>
+        </form>
         <div class="paddingArrumaListarCliente"></div>
+        
         <c:import url="Rodape.jsp"/>
     </body>
 </html>

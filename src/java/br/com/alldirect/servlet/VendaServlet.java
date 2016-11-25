@@ -6,6 +6,7 @@
 package br.com.alldirect.servlet;
 
 import br.com.alldirect.dao.IngressoDao;
+import br.com.alldirect.dao.VendaDao;
 import br.com.alldirect.model.VendaModel;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -23,35 +24,18 @@ public class VendaServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String acao = request.getParameter("acao");
-
+        String id = request.getParameter("id");
+        
+        System.out.println("Acao: "+ acao);
+        System.out.println("Id: " + id);
+        
         if ("Excluir".equals(acao)) {
-            VendaModel vendaModel = new VendaModel();
-            String id = request.getParameter("idVenda");
-            vendaModel.setIdVenda(Integer.parseInt(id));
-            RequestDispatcher rd = request.getRequestDispatcher("/listaVenda.jsp");
-            rd.forward(request, response);
-        }
-
-        if (!("Excluir".equals(acao))){
-            int idVenda = Integer.parseInt(request.getParameter("idVenda"));
-            int qntdeVenda = Integer.parseInt(request.getParameter("qntdeVenda"));
-            int idCliente = Integer.parseInt(request.getParameter("idCliente"));
-            int idIngresso = Integer.parseInt(request.getParameter("idIngresso"));
-             
-            VendaModel vendaModel = new VendaModel();
-            
-            vendaModel.setIdCliente(idCliente);
-            vendaModel.setIdIngresso(idIngresso);
-            vendaModel.setIdVenda(idVenda);
-            vendaModel.setQntdeVenda(qntdeVenda);
-            
             IngressoDao ingressoDao = new IngressoDao();
-            ingressoDao.adicionarIngresso(ingresso);
-
-            RequestDispatcher rd = request.getRequestDispatcher("/listaProdutos.jsp");
+            //String id = request.getParameter("id");
+            ingressoDao.removerIngresso(Integer.parseInt(id));
+            RequestDispatcher rd = request.getRequestDispatcher("/ListarVenda.jsp");
             rd.forward(request, response);
-        }
-
+        }     
     }
 }
 

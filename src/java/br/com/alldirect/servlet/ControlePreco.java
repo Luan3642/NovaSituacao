@@ -2,7 +2,6 @@ package br.com.alldirect.servlet;
 
 import br.com.alldirect.dao.IngressoDao;
 import br.com.alldirect.model.IngressoModel;
-import br.com.alldirect.model.VendaModel;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.logging.Level;
