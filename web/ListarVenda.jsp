@@ -33,11 +33,10 @@
                             <td>${c.idCliente}</td>
                             <td>${c.idIngresso}</td>
                             <th>${c.idVenda} 
-                                <a href="VendaServlet?acao=Excluir&id=${c.idVenda}"></a> 
-                                <button type="submit" class="btn btn-danger ">
-                                    <span class="glyphicon glyphicon-remove-sign"></span>
-                                    Excluir venda
-                                </button></th>
+                                <a href="VendaServlet?acao=Excluir&id=${c.idVenda}">
+                                    <img src="img/delete.png">
+                                </a> 
+                                </th>
                             </c:forEach>
                     </tr>
                 </tbody>

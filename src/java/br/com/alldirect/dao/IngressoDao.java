@@ -51,8 +51,8 @@ public class IngressoDao {
         return idIngresso;
     }
 
-    //Método remover ingresso
-    public void removerIngresso(int id) {
+    //Método remover venda
+    public void removerVenda(int id) {
         String sql = "DELETE FROM VENDA WHERE ID_VENDA = ?";
 
         try {
@@ -62,6 +62,6 @@ public class IngressoDao {
             stmt.close();
         } catch (SQLException e) {
             System.out.println("Erro ao excluir venda!\n" + e);
-        }
+}
     }
 }

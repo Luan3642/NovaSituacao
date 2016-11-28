@@ -24,7 +24,7 @@ public class VendaServlet extends HttpServlet {
         
         if ("Excluir".equals(acao)) {
             IngressoDao ingressoDao = new IngressoDao();
-            ingressoDao.removerIngresso(Integer.parseInt(id));
+            ingressoDao.removerVenda(Integer.parseInt(id));
             RequestDispatcher rd = request.getRequestDispatcher("/ListarVenda.jsp");
             rd.forward(request, response);
         }     

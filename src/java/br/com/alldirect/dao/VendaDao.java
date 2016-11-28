@@ -75,4 +75,16 @@ public class VendaDao {
             return null;
         }
     }
+    public void removerVenda(int id) {
+        String sql = "DELETE FROM VENDA WHERE ID_VENDA = ?";
+
+        try {
+            PreparedStatement stmt = conecta.prepareStatement(sql);
+            stmt.setInt(1, id);
+            stmt.execute();
+            stmt.close();
+        } catch (SQLException e) {
+            System.out.println("Erro ao excluir venda!\n" + e);
+        }
+    }
 }
